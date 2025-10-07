@@ -1,145 +1,224 @@
-/* Colors 
-Home, section 1 (head, background): #9fa7bf
-Home, section 1 (head, boxes): #568c63
-Home, section 2 (developers, background): #c5c8d9 
-Home, section 2 (developers, boxes): #49736f
- */
-
-/* Utilities  */
-p {
-  margin: 10px 0;
-  font-size: 18px;
-}
-/* Section header_home */
+/* Hoved bildet + Tittel */
 .section_header_home {
-  background-color:#9fa7bf;
-}
-.header_home {
-  display: flex;  
-  align-items: start;
-  background: #9fa7bf;
-}
-.header_home .box {
-  flex: 1;
-  background: #9fa7bf;
+  background: linear-gradient(to bottom right, #e6f4ea, #c5c8d9);
+  position: relative;
   color: #fff;
-  border-radius: 10px;
-  margin: 20px 10px;
-  padding: 15px 20px;
-  text-align:center;
+  height: 90vh;
+  display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  max-width: 1500px;
+  margin: 0 auto;
+  border-left: 15px solid #fff;
+  border-right: 15px solid #fff;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.header_home .box:nth-of-type(1) {
-  flex-grow:2;
+
+.hero_overlay {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
 }
-.header_home .box:nth-of-type(2) {
-  flex-grow:1;
+
+.hero_content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
-.container_buttons_links_header_home {
+
+.hero_content h1 .highlight {
+  color: #7cc785;
+}
+
+.hero_content p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+.hero_buttons {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-wrap:wrap;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
-.container_buttons_links_header_home a:hover {
-  color: #9fa7bf;
+
+/* Get started- Log in knapp */
+.btn_primary,
+.btn_secondary {
+  padding: 14px 35px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
-.container_buttons_links_header_home btn {
-  width: 100px;
-  height: 100px;
-  background: #9fa7bf;
+
+.btn_primary {
+  background-color: #7cc785;
   color: #fff;
-  display: flex;
-  justify-content:center;
-  align-items:center;
 }
-/* Section developers */
+
+.btn_primary:hover {
+  background-color: #68b071;
+}
+
+.btn_secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn_secondary:hover {
+  background-color: #fff;
+  color: #7cc785;
+}
+
+/* What we do + Your impact */
+.info_cards_container {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-top: -100px;
+  position: relative;
+  z-index: 10;
+}
+
+.we_do_card {
+  background: #f8f8f8;
+  color: #2c2c2c;
+  padding: 20px;
+  border-radius: 0;
+  max-width: 450px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  align-self: center;
+}
+
+.impact_card {
+  background: #2c2c2c;
+  color: #fff;
+  padding: 40px;
+  border-radius: 0;
+  max-width: 450px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.impact_card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transform: translateY(-3px);
+}
+
+.link_action {
+  color: #7cc785;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.link_action:hover {
+  border-color: #7cc785;
+}
+
+/* Explore more (tidligere developers section) */
 .section_developers {
-  background-color:#c5c8d9;
+  background-color: #e7ebf0;
+  padding: 100px 20px;
+  text-align: center;
 }
-.developers {
-  display: flex;  
-  align-items: start;
-  background: #c5c8d9;
+
+.developers_intro {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
 }
-.developers .box {
-  flex: 1;
-  background: #49736f;
-  color: black;
-  border-radius: 10px;
-  margin: 20px 10px;
-  padding: 15px 20px;
-  text-align:center;
-  align-items: center;
-  justify-content: center;
-}
-.developers .box:nth-of-type(1) {
-  flex-grow:4;
-}
-.developers .box:nth-of-type(2) {
-  flex-grow:4;
-}
-.developers .box:nth-of-type(3) {
-  flex-grow:4;
-}
-.developers .box2 {
-  flex: 1;
-  background: #49736f;
-  color: black;
-  border-radius: 10px;
-  margin: 20px 10px;
-  padding: 15px 20px;
-  text-align:center;
-  align-items: center;
-  justify-content: center;
-}
-.developers .box2:nth-of-type(1) {
-  flex-grow:4;
-}
-.developers .box2:nth-of-type(2) {
-  flex-grow:4;
-}
-.developers .box2:nth-of-type(3) {
-  flex-grow:4;
-  background: #c5c8d9;
-}
-.section_container_buttons_developers {
+
+/* Team boxes (Tidligere developers) */
+.team_boxes {
   display: flex;
   justify-content: center;
+  gap: 3%;
+  margin-top: 40px;
+}
+
+.team_box {
+  border-radius: 0;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  height: 240px; 
+  display: flex;
   align-items: center;
-  flex-wrap:wrap;
-  padding: 0px 0px;
-  margin: 0px 0px;
-}
-.btn_developers {
-  padding: 10px 10px;
-  margin: 10px 10px 10px 10px;
+  justify-content: center;
+  transition: all 0.3s ease;
   color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 18px;
-  background-color: #49736f;
-  border: 2px solid  #c5c8d9;
+  text-align: center;
+  width: 32%;
 }
-.btn_developers:hover {
+
+.team_box:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transform: translateY(-3px);
+}
+
+.team_box h3 {
+  margin: 0;
+  font-size: 1.2rem;
   color: #fff;
-  background-color: #c5c8d9;
-  border: 2px solid #c5c8d9;
+}
+
+.team_box h3 a {
+  color: #fff;
   text-decoration: none;
 }
 
+.team_box h3 a:hover {
+  text-decoration: underline;
+}
 
-@media (max-width:768px) { 
-  .header_home {
+/* Individuell box farge */
+.emissions_box {
+  background-color: #555555;
+}
+
+.methodology_box {
+  background-color: #7cc785;
+}
+
+.about_us_box {
+  background-color: #555555;
+}
+
+/*  RESPONSIVE  */
+@media (max-width: 768px) {
+  .hero_content h1 {
+    font-size: 2.5rem;
+  }
+  .hero_content p {
+    font-size: 1rem;
+  }
+  .floating_card {
+    max-width: 90%;
+  }
+
+  .team_boxes {
     flex-direction: column;
-  } 
-  .developers {
-    flex-direction: column;
-  } 
-  .section_container_buttons_developers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    gap: 20px;
+  }
+
+  .team_box {
+    width: 100%;
   }
 }

@@ -1,103 +1,70 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<!-- Header -->
-<section class="section_header_home">
-  <div class="container">
-
-    <div class="header_home">
-      <div class="box"> 
-        <h1 style="font-size:55px;"><span class="text-logo"> Home</span></h1>
-        <p style="text-align:left;">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat dolores quos asperiores repellendus facilis cum illo aperiam odit doloremque nostrum. Totam excepturi labore voluptatibus iusto sapiente quisquam consectetur optio magnam voluptates omnis vel officia alias distinctio quas laborum reiciendis ratione inventore veniam, cupiditate doloribus dolore, eius natus a. Magni inventore consequuntur voluptas reprehenderit perferendis! Molestias aspernatur rem autem aut temporibus.
-        </p>
-        <div class="container_buttons_links_header_home">
-          <div class="btn">
-              <a href="{{url_for('users.register')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">Register</a>
-          </div>
-          <div class="btn">
-              <a href="{{url_for('users.login')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">Login</a>
-          </div>
-        </div>  
-      </div>
-      <div class="box">
-        <img 
-          src="{{url_for('static', filename='icons/carbon_app.svg')}}"
-          width="325" 
-          height="325"
-          alt=""/>
-      </div>
-    </div>
-
-  </div>
-</section> 
-
-<!-- Developers -->
-<section class="section_developers">
-  <div class="container">
-
-    <div class="developers" style="display:block;">
-      <h1 style="text-align:center;"> Our Team</h1>
+<!-- Bildet + Hero section -->>
+<section class="section_header_home" style="background: url('{{ url_for('static', filename='icons/Forestphoto.png') }}') center center / cover no-repeat;">
+  <div class="hero_overlay">
+    <div class="container hero_content">
+      <h1><span class="highlight">Carbon</span> App</h1>
       <p>
-        Our team of economists and developers ... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, ut? Praesentium quidem sunt perspiciatis doloremque fugiat nesciunt quaerat ullam, pariatur iure unde ratione ipsum adipisci repellendus, repudiandae hic sit, temporibus molestias corrupti aut soluta sequi! Architecto deleniti expedita nisi repudiandae enim eum quas odit facilis placeat neque porro, animi incidunt consectetur. Maiores ab saepe tempora, iure asperiores beatae suscipit cum ipsum, rerum doloremque reprehenderit dolorum debitis, aliquam quasi. Maiores corporis fuga quasi nesciunt dolor iste, inventore necessitatibus unde!
-      </p>      
-    </div>
-
-    <div class="developers">
-        <div class="box">
-          <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="" style="border-radius: 50%; width:200px;">
-          <h3>Developer 1</h3>
-          <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
-          </p>
-          <div class="section_container_buttons_developers">
-            <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
-          </div> 
-        </div>
-        <div class="box">
-          <img src="https://randomuser.me/api/portraits/women/11.jpg" alt="" style="border-radius: 50%; width:200px;">
-          <h3>Developer 2</h3>
-          <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
-          </p>
-          <div class="section_container_buttons_developers">
-            <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
-          </div> 
-        </div>           
-        <div class="box">
-          <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="" style="border-radius: 50%; width:200px;">
-          <h3>Developer 3</h3>
-          <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
-          </p>
-          <div class="section_container_buttons_developers">
-            <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
-          </div> 
-        </div>     
-    </div>
-
-    <div class="developers">
-      <div class="box2">
-        <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="" style="border-radius: 50%; width:200px;">
-        <h3>Developer 4</h3>
-        <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
-        </p>
-        <div class="section_container_buttons_developers">
-          <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
-        </div> 
+        A modern platform to calculate and understand the carbon footprint of different vehicles.  
+        Empowering a cleaner, greener, and smarter future for transportation.
+      </p>
+      <div class="hero_buttons">
+        <a href="{{ url_for('users.register') }}" class="btn_primary">Get Started</a>
+        <a href="{{ url_for('users.login') }}" class="btn_secondary">Login</a>
       </div>
-      <div class="box2">
-        <img src="https://randomuser.me/api/portraits/women/13.jpg" alt="" style="border-radius: 50%; width:200px;">
-        <h3>Developer 5</h3>
-        <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
-        </p>
-        <div class="section_container_buttons_developers">
-          <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
-        </div> 
-      </div>           
-      <div class="box2">
+    </div>
+  </div>
+</section>
 
-      </div>     
+<!-- Info kort -->
+<section class="info_cards_container">
+  <!-- What We Do -->
+  <div class="we_do_card">
+    <h3>What We Do</h3>
+    <p>
+      We help individuals and organizations assess, visualize, and reduce their carbon emissions  
+      through data-driven analysis and user-friendly digital tools.
+    </p>
   </div>
 
-  </div>          
+  <!-- What’s Your Impact -->
+  <div class="impact_card">
+    <h3>What’s Your Impact?</h3>
+    <p>
+      Discover how your vehicle choices influence carbon emissions.  
+      Join us in the journey toward sustainability — every kilometer counts.
+    </p>
+    <a href="{{ url_for('carbon_app.carbon_app_home') }}" class="link_action">Calculate Emissions</a>
+  </div>
 </section>
-        
+
+<!-- EXPLORE MORE / Navigasjonsbokser -->
+<section class="section_developers">
+  <div class="container text-center">
+    <h2 class="developers_title">Explore More</h2>
+    <p class="developers_intro">
+      See the total global emissions, explore our methodology, and meet our team.
+    </p>
+
+    <div class="team_boxes d-flex justify-content-center gap-3 mt-4">
+      <!-- Total Global Emissions -->
+      <div class="team_box emissions_box" style="background: url('{{ url_for('static', filename='icons/Grayercement.png') }}') center center / cover no-repeat;">
+        <h3>Total Global Emissions</h3>
+      </div>
+
+      <!-- Methodology -->
+      <a href="{{ url_for('methodology.methodology_home') }}" class="team_box methodology_box" style="text-decoration: none;">
+        <h3>Methodology</h3>
+      </a>
+
+      <!-- About Us -->
+      <div class="team_box about_us_box" style="background: url('{{ url_for('static', filename='icons/Grayercement.png') }}') center center / cover no-repeat;">
+        <h3>About Us</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock content %}
