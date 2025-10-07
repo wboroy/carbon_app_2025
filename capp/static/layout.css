@@ -15,10 +15,23 @@ Navbar (a menu): #2a4359
   padding: 0;
   margin: 0;
 }
+
+/* Carbon App logo */
+.text-logo {
+  color: #006400;
+}
+
+/* Font imports */
+
 body {
   font-family: 'Roboto', sans-serif;
-  background: #fff;
+  background: url('../static/icons/Forestphoto.png') center top / cover no-repeat, 
+              linear-gradient(to bottom right, #e6f4ea, #c5c8d9);
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
 }
 .container {
   margin: auto;
@@ -43,9 +56,10 @@ p {
 img {
   width: 100%;
 }
+
 /* Navbar  */
 .section_carbon_app_navbar {
-  background-color:white;
+  background-color: transparent;
 }
 .carbon_app_navbar {
   display: flex;
@@ -53,7 +67,7 @@ img {
   justify-content: flex-start;
   height: 70px;
   align-items: center;
-  background-color: white;
+  background-color: transparent;
   padding: 0 0px;
 }
 .carbon_app_navbar a {
@@ -62,6 +76,8 @@ img {
   margin: 0 5px;
   font-size: 20px;
   text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
 }
 .carbon_app_navbar a:hover{
   border-bottom: #2a4359 4px solid;
@@ -72,10 +88,10 @@ img {
 }
 .carbon_app_navbar .logo {
   font-weight: 400;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
-.text-logo {
-  color: #568c63;
-}
+
 /* Footer  */
 .section_footer{
   background-color:white;

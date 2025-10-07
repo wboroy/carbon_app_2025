@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<!-- Bildet + Hero section -->>
+<!-- Bildet + Hero section -->
 <section class="section_header_home" style="background: url('{{ url_for('static', filename='icons/Forestphoto.png') }}') center center / cover no-repeat;">
   <div class="hero_overlay">
     <div class="container hero_content">
@@ -33,7 +33,7 @@
   <div class="impact_card">
     <h3>What’s Your Impact?</h3>
     <p>
-      Discover how your vehicle choices influence carbon emissions.  
+      Discover how your travel habits influence carbon emissions.  
       Join us in the journey toward sustainability — every kilometer counts.
     </p>
     <a href="{{ url_for('carbon_app.carbon_app_home') }}" class="link_action">Calculate Emissions</a>

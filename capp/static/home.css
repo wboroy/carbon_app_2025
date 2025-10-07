@@ -1,3 +1,10 @@
+/* Body background to eliminate white scrollbar area */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #e6f4ea, #c5c8d9);
+}
+
 /* Hoved bildet + Tittel */
 .section_header_home {
   background: linear-gradient(to bottom right, #e6f4ea, #c5c8d9);
@@ -8,10 +15,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  max-width: 1500px;
-  margin: 0 auto;
-  border-left: 15px solid #fff;
-  border-right: 15px solid #fff;
+  width: 100%;
+  margin: 0;
   box-sizing: border-box;
   background-size: cover;
   background-position: center;
@@ -36,7 +41,7 @@
 }
 
 .hero_content h1 .highlight {
-  color: #7cc785;
+  color: #006400;
 }
 
 .hero_content p {
