@@ -41,10 +41,7 @@ ul {
   list-style: none;
   font-size: 400;
 }
-a {
-  color: #333;
-  text-decoration: none;
-}
+
 h1, h2 {
   font-weight: 400;
   line-height: 1.2;
