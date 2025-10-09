@@ -59,7 +59,7 @@ img {
 
 /* Navbar  */
 .section_carbon_app_navbar {
-  background-color: transparent;
+  background-color: #b8eccc;
 }
 .carbon_app_navbar {
   display: flex;
@@ -140,3 +140,4 @@ img {
     border-bottom: #2a4359 2px solid;
   }
 }
+

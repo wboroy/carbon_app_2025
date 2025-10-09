@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom right, #b8f4ca, #bcc0da);
+  background: linear-gradient(to bottom right, #b8eccc, #b8eccc);
 }
 
 /* Hoved bildet + Tittel */
@@ -94,7 +94,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 0;
-  margin-top: -100px;
+  margin-top: -50px;
   position: relative;
   z-index: 10;
 }
@@ -138,11 +138,34 @@ body {
   border-color: #7cc785;
 }
 
+.custom-shape-divider-top-1759939526 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1759939526 svg {
+    position: relative;
+    display: block;
+    width: calc(107% + 1.3px);
+    height: 149px;
+    transform: scaleY(-1);
+}
+
+.custom-shape-divider-top-1759939526 .shape-fill {
+    fill: #e7ebf0;
+}
+
 /* Explore more (tidligere developers section) */
 .section_developers {
-  background-color: #e7ebf0;
+  background-color: #e7ebf0 !important;
   padding: 100px 20px;
   text-align: center;
+
 }
 
 .developers_intro {
@@ -204,6 +227,28 @@ body {
 
 .about_us_box {
   background-color: #555555;
+}
+.custom-shape-divider-bottom-1759941253 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    background-color: #e7ebf0;
+}
+
+.custom-shape-divider-bottom-1759941253 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 127px;
+    background-color: #e7ebf0;
+}
+
+.custom-shape-divider-bottom-1759941253 .shape-fill {
+    fill: #FFFFFF;
 }
 
 /*  RESPONSIVE  */
