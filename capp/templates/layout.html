@@ -32,10 +32,13 @@
       <!-- To activate media queries in devices -->
       <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1">
 
+      <!-- Favicon -->
+      <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='icons/carbon_app.svg') }}">
+
         {% if title %}
-            <title>{{ title }}</title>
+            <title>{{ title }} - FootPrint</title>
         {% else %}
-            <title>home</title>
+            <title>FootPrint</title>
         {% endif %}
         
     </head>
