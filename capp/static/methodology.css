@@ -1,10 +1,3 @@
-/* Colors 
-Methodology, section 1 (header, background): #2a4359
-Methodology, section 1 (header, boxes): #6da6a6
-Methodology, section 2 (methodology, background): #466fa6
-Methodology, section 2 (methodology, boxes): #8badd9
-*/
-
 /* Utilities  */
 p {
   margin: 10px 0;
@@ -21,18 +14,24 @@ h4 {
 ol {
   font-size: 18px;
 }
+
 /* Section header */
 .section_header_methodology {
-  background-color:#2a4359;
+  background-color: #e6f4ea;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  height: 80vh; 
+  text-align: center;
 }
 .header {
   display: flex;  
   align-items: start;
-  background: #2a4359;
+  background: #e6f4ea;
 }
 .header .box {
   flex: 1;
-  background: #2a4359;
+  background: #7cc785;
   color: #fff;
   border-radius: 10px;
   margin: 20px 10px;
@@ -65,20 +64,42 @@ ol {
   justify-content:center;
   align-items:center;
 }
+
+ol {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+  
+}
+.methodology ol h4 {
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.methodology ol p {
+  text-align: left;
+}
+
+
+
+
 /* Section methodology */
 .section_body_methodology {
-  background-color:#466fa6;
+  background-color: #b8eccc;
+  height: 250vh;
 }
 .methodology {
   display: flex;  
   align-items: start;
-  background: #466fa6;
+  background: #b8eccc;
 }
+
 /* Table with one column */
 .methodology .box_table1 {
   flex: 1;
-  background: #8badd9;
-  color: black;
+  background: #7cc785;
+  color: #fff;
   border-radius: 10px;
   margin: 10px 10px 10px 10px;
   padding: 15px 15px;
@@ -88,36 +109,64 @@ ol {
 }
 .methodology .box_table1:nth-of-type(1) {
   flex-grow:1;
-  background: #466fa6;
+  background: #b8eccc;
 }
 .methodology .box_table1:nth-of-type(2) {
   flex-grow:4;
 }
 .methodology .box_table1:nth-of-type(3) {
   flex-grow:1;
-  background: #466fa6;
+  background: #b8eccc;
 }
+
 /* Table with two columns */
 .methodology .box_table2 {
   flex: 1;
-  background: #8badd9;
-  color: black;
-  border-radius: 10px;
+  background-color: #7cc785;
+  color: #fff;
+  border-radius: 0;
   margin: 10px 10px 10px 10px;
   padding: 15px 15px;
-  text-align:center;
-  align-items: center;
-  justify-content: center;
+  border: 1px solid #68b071;
 }
 .methodology .box_table2:nth-of-type(1) {
   flex-grow:1;
-  background: #8badd9;
+  background: #7cc785;
 }
 .methodology .box_table2:nth-of-type(2) {
   flex-grow:1;
-  background: #8badd9;
+  background: #7cc785;
 }
 
+/* Container matches width of your formula boxes */
+.box_table2_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 60px;             
+  width: 100%;                          
+  max-width: 1278px;                      
+  margin: 100px auto;
+  box-sizing: border-box;
+}
+.box_table2_grid .grid-box {
+  background-color: blanchedalmond;            
+  border-radius: 0;                     
+  border: 1px solid burlywood;          
+  width: 100%;                         
+  height: 100%;                   
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;   
+  justify-content: center;        
+}
+
+.box_table2_grid .grid-box:first-child {
+  font-weight: bold; 
+}
+
+.box_table2_grid .grid-box:nth-child(2) {
+    font-weight: bold;
+}
 
 @media (max-width:768px) { 
   .header {
