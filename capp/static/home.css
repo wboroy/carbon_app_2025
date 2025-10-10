@@ -34,9 +34,11 @@ body {
   padding: 0 20px;
 }
 
+/* Tekst og bilde */
+
 .hero_content h1 {
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
@@ -49,7 +51,9 @@ body {
   margin: 0 auto 2rem;
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #f0f0f0;
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
 }
 
 .hero_buttons {
