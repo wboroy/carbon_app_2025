@@ -60,16 +60,19 @@
         <h3>Total Global Emissions</h3>
       </div>
 
-      <!-- Methodology -->
-      <a href="{{ url_for('methodology.methodology_home') }}" class="team_box methodology_box" style="text-decoration: none;">
-        <h3>Methodology</h3>
-      </a>
+<!-- Methodology -->
+<a href="{{ url_for('methodology.methodology_home') }}" 
+   class="team_box methodology_box" 
+   style="text-decoration: none;">
+  <h3>Methodology</h3>
+</a>
 
-      <!-- About Us -->
+<!-- About Us -->
 <a href="{{ url_for('about_us.about_us_home') }}" 
    class="team_box about_us_box" 
    style="background: url('{{ url_for('static', filename='icons/Grayercement.png') }}') center center / cover no-repeat; text-decoration: none;">
   <h3>About Us</h3>
+</a>
       </div>
     </div>
   </div>
@@ -84,4 +87,5 @@
 </div>
 
 {% endblock content %}
+
 
