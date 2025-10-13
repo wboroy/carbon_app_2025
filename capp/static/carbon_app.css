@@ -25,6 +25,13 @@ h4 {
   align-items: start;
   background: #466fa6;
 }
+.carbon-calculator-title .text-logo {
+  color: #ffffff;
+  justify-content: center;
+  display: flex;
+  font-weight: 500;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;
+}
 .header_carbon_app .box {
   flex: 1;
   background: #466fa6;
