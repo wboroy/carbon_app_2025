@@ -66,8 +66,10 @@
       </a>
 
       <!-- About Us -->
-      <div class="team_box about_us_box" style="background: url('{{ url_for('static', filename='icons/Grayercement.png') }}') center center / cover no-repeat;">
-        <h3>About Us</h3>
+<a href="{{ url_for('about_us.about_us_home') }}" 
+   class="team_box about_us_box" 
+   style="background: url('{{ url_for('static', filename='icons/Grayercement.png') }}') center center / cover no-repeat; text-decoration: none;">
+  <h3>About Us</h3>
       </div>
     </div>
   </div>
@@ -82,3 +84,4 @@
 </div>
 
 {% endblock content %}
+
