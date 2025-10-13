@@ -32,13 +32,10 @@
       <!-- To activate media queries in devices -->
       <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1">
 
-      <!-- Favicon -->
-      <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='icons/carbon_app.svg') }}">
-
         {% if title %}
-            <title>{{ title }} - FootPrint</title>
+            <title>{{ title }}</title>
         {% else %}
-            <title>FootPrint</title>
+            <title>home</title>
         {% endif %}
         
     </head>
@@ -80,7 +77,7 @@
           <div class="container">
             <div class="footer">
               <h1>
-                Footprint 
+                Carbon App 
                 <a href="#">
                   <i class="fa-solid fa-circle-up" style="color: #568c63"></i>
                 </a>

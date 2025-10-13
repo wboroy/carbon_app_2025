@@ -55,19 +55,24 @@
     </p>
 
     <div class="team_boxes d-flex justify-content-center gap-3 mt-4">
-      <!-- Total Global Emissions -->
+<!-- Total Global Emissions -->
       <div class="team_box emissions_box" style="background: url('{{ url_for('static', filename='icons/Grayercement.png') }}') center center / cover no-repeat;">
         <h3>Total Global Emissions</h3>
       </div>
 
-      <!-- Methodology -->
-      <a href="{{ url_for('methodology.methodology_home') }}" class="team_box methodology_box" style="text-decoration: none;">
-        <h3>Methodology</h3>
-      </a>
+<!-- Methodology -->
+<a href="{{ url_for('methodology.methodology_home') }}" 
+   class="team_box methodology_box" 
+   style="text-decoration: none;">
+  <h3>Methodology</h3>
+</a>
 
-      <!-- About Us -->
-      <div class="team_box about_us_box" style="background: url('{{ url_for('static', filename='icons/Grayercement.png') }}') center center / cover no-repeat;">
-        <h3>About Us</h3>
+<!-- About Us -->
+<a href="{{ url_for('about_us.about_us_home') }}" 
+   class="team_box about_us_box" 
+   style="background: url('{{ url_for('static', filename='icons/Grayercement.png') }}') center center / cover no-repeat; text-decoration: none;">
+  <h3>About Us</h3>
+</a>
       </div>
     </div>
   </div>

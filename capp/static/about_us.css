@@ -1,15 +1,15 @@
-
 /* Hero / Header Section */
 .section_header_home {
-    background: #b9eccd; 
+    background: linear-gradient(135deg, #b9eccd, #8cd6aa);
     position: relative;
     color: #fff;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .section_header_home .hero_overlay {
@@ -17,15 +17,19 @@
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0 20px;
+    text-align: center;
 }
 
 .section_header_home h1 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3.5rem;
+    font-weight: 800;
     margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .section_header_home h1 .highlight {
@@ -33,12 +37,13 @@
 }
 
 .section_header_home p {
-    font-size: 1.1rem;
-    line-height: 1.5;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #f4f4f4;
     max-width: 700px;
     margin: 0 auto;
+    text-align: center;
 }
-
 
 /* Team Section */
 .section_developers {
@@ -58,6 +63,7 @@
     color: #444;
     max-width: 800px;
     margin: 0 auto 50px auto;
+    text-align: center;
 }
 
 /* Developers Grid */
