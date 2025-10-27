@@ -54,19 +54,19 @@
               <nav>
                 <ul>
                     <li>
-                      <a href="{{url_for('users.register')}}">Register</a>
+                      <a href="{{url_for('users.register')}}" class="{% if request.endpoint == 'users.register' %}active{% endif %}">Register</a>
                     </li>
                     <li>
-                      <a href="{{url_for('users.login')}}">Login</a>
+                      <a href="{{url_for('users.login')}}" class="{% if request.endpoint == 'users.login' %}active{% endif %}">Login</a>
                     </li>
                     <li>
-                        <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
+                        <a href="{{url_for('methodology.methodology_home')}}" class="{% if request.endpoint and 'methodology' in request.endpoint %}active{% endif %}">Methodology</a>
                     </li>
                     <li>
-                        <a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a>
+                        <a href="{{url_for('carbon_app.carbon_app_home')}}" class="{% if request.endpoint and 'carbon_app' in request.endpoint %}active{% endif %}">Carbon App</a>
                     </li>
                     <li>
-                        <a href="{{url_for('about_us.about_us_home')}}">About Us</a>
+                        <a href="{{url_for('about_us.about_us_home')}}" class="{% if request.endpoint and 'about_us' in request.endpoint %}active{% endif %}">About Us</a>
                     </li>
                 </ul>
               </nav> 

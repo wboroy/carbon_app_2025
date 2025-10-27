@@ -1,143 +1,221 @@
-/* Colors */
-/* Rainy theme 5 -Green Digitalization Course and Students Apps-:
-Navbar (background): #8bbbd9
-Navbar (a hover): #466fa6
-Navbar (logo): #568c63
-Navbar (a menu): #2a4359
-*/
+/* ========================================
+   UNIFIED COLOR SCHEME - Carbon Footprint App
+   ======================================== */
+:root {
+    /* Primary Dark Green */
+    --primary-dark: #0f4c3a;
+    --primary-green: #16a34a;
+    --primary-light: #000000;
 
-/* Google fonts Roboto  */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+    /* Secondary Colors */
+    --secondary-dark: #1a3a2e;
+    --secondary-green: #15803d;
+    --accent-green: #10b981;
+
+    /* Neutral Colors */
+    --dark-bg: #1f2937;
+    --medium-bg: #334155;
+    --light-bg: #f8fafc;
+    --white: #ffffff;
+    --soft-gray: #e2e8f0;
+    --lighter-gray: #f1f5f9;
+    --medium-gray: #cbd5e1;
+
+    /* Text Colors */
+    --text-dark: #1a1a1a;
+    --text-slate: #1e293b;
+    --text-medium: #4b5563;
+    --text-light: #e2e8f0;
+    --text-muted: #cbd5e1;
+    --text-white: #ffffff;
+
+    /* Border & Shadow */
+    --border-color: rgba(34, 197, 94, 0.3);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Google fonts - Playfair Display and Source Sans 3 */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap');
 
 /* CSS utilities */
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 /* Carbon App logo */
 .text-logo {
-  color: #006400;
+    color: var(--primary-dark);
 }
 
 /* Font imports */
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background: url('../static/icons/Forestphoto.png') center top / cover no-repeat, 
-              linear-gradient(to bottom right, #e6f4ea, #c5c8d9);
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100vh;
+    font-family: 'Source Sans 3', sans-serif;
+    background: url('../static/icons/Forestphoto.png') center top / cover no-repeat fixed,
+        linear-gradient(to bottom right, #e6f4ea, #c5c8d9);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
 }
+
 .container {
-  margin: auto;
-  max-width: 1320px;
+    margin: auto;
+    max-width: 1320px;
 }
-ul { 
-  list-style: none;
-  font-size: 400;
+
+ul {
+    list-style: none;
+    font-size: 400;
 }
+
 a {
-  color: #333;
-  text-decoration: none;
+    color: #333;
+    text-decoration: none;
 }
-h1, h2 {
-  font-weight: 400;
-  line-height: 1.2;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.2;
 }
+
 p {
-  margin: 10px 0;
-  font-size: 14px;
+    margin: 10px 0;
+    font-size: 14px;
 }
+
 img {
-  width: 100%;
+    width: 100%;
 }
 
 /* Navbar  */
 .section_carbon_app_navbar {
-  background-color:#b8eccc;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
 }
+
 .carbon_app_navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  height: 70px;
-  align-items: center;
-  background-color: transparent;
-  padding: 0 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 70px;
+    align-items: center;
+    background-color: transparent;
+    padding: 0 0px;
 }
+
 .carbon_app_navbar a {
-  color: #2a4359;
-  padding: 10px 20px;
-  margin: 0 5px;
-  font-size: 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: 500;
+    color: var(--primary-dark);
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
 }
-.carbon_app_navbar a:hover{
-  border-bottom: #2a4359 4px solid;
+
+.carbon_app_navbar a:hover {
+    background-color: transparent;
+    color: var(--secondary-dark);
 }
+
+/* Active state for current page */
+.carbon_app_navbar a.active {
+    background: var(--primary-green);
+    color: var(--text-white);
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.carbon_app_navbar a.active:hover {
+    background: var(--primary-green);
+}
+
 .carbon_app_navbar ul {
-  display: flex;
-  flex-direction: row;
-  align-self: flex-end;
-  margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    margin-bottom: 5px;
 }
+
 .carbon_app_navbar .logo {
-  font-weight: 400;
-  padding: 10px 15px;
-  border-radius: 5px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
+
 .carbon_app_navbar .logo .logo-link {
-  color: inherit;
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
-  border-radius: 0;
-  font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    font-size: inherit;
 }
+
 .carbon_app_navbar .logo .logo-link:hover {
-  border-bottom: none;
-  color: inherit;
+    border-bottom: none;
+    color: inherit;
 }
 
 /* Footer  */
-.section_footer{
-  background-color:white;
+.section_footer {
+    background-color: white;
 }
+
 .footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 70px;
-  align-items: center;
-  background-color: white;
-  padding: 0 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 70px;
+    align-items: center;
+    background-color: white;
+    padding: 0 0px;
 }
 
 
 /* Media query */
-@media(max-width:768px){
-  .carbon_app_navbar {
-    height: 180px;
-    flex-direction: column;
-  }
-  .carbon_app_navbar a {
-    font-size: 15px;
-    padding: 5px 20px;
-  }
-  .carbon_app_navbar ul {
-    display: flex;
-    flex-direction: column;
-  }
-  .carbon_app_navbar a:hover{
-    color: #568c63;
-    border-bottom: #2a4359 2px solid;
-  }
-}
+@media(max-width:768px) {
+    .carbon_app_navbar {
+        height: 180px;
+        flex-direction: column;
+    }
 
+    .carbon_app_navbar a {
+        font-size: 15px;
+        padding: 5px 20px;
+    }
+
+    .carbon_app_navbar ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carbon_app_navbar a:hover {
+        color: #568c63;
+        border-bottom: #2a4359 2px solid;
+    }
+}

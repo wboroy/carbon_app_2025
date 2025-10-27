@@ -2,7 +2,7 @@
 {% block content %}
 
 <!-- Bildet + Hero section -->
-<section class="section_header_home" style="background: url('{{ url_for('static', filename='icons/Forestphoto.png') }}') center center / cover no-repeat;">
+<section class="section_header_home" style="background: url('{{ url_for('static', filename='icons/foggyforrest.jpg') }}') center center / cover no-repeat;">
   <div class="hero_overlay">
     <div class="container hero_content">
       <h1><span class="highlight">Carbon</span> App</h1>
@@ -12,7 +12,7 @@
       </p>
       <div class="hero_buttons">
         <a href="{{ url_for('users.register') }}" class="btn_primary">Get Started</a>
-        <a href="{{ url_for('users.login') }}" class="btn_secondary">Login</a>
+         <a href="{{ url_for('users.login') }}" class="btn_secondary">Login</a>
       </div>
     </div>
   </div>
@@ -46,36 +46,79 @@
     </svg>
 </div>
 
-<!-- EXPLORE MORE / Navigasjonsbokser -->
+<!-- MEET OUR TEAM -->
 <section class="section_developers">
-  <div class="container text-center">
-    <h2 class="developers_title">Explore More</h2>
-    <p class="developers_intro">
-      See the total global emissions, explore our methodology, and meet our team.
-    </p>
+ <div class="container">
+   <h1>Meet our team!</h1>
+   <p>
+    The people who made all of this possible:
+   </p>
 
-    <div class="team_boxes d-flex justify-content-center gap-3 mt-4">
-      <!-- Total Global Emissions -->
-      <div class="team_box emissions_box" style="background: url('{{ url_for('static', filename='icons/Grayercement.png') }}') center center / cover no-repeat;">
-        <h3>Total Global Emissions</h3>
-      </div>
+   <div class="developers">
+     <!-- Developer 1 -->
+     <div class="box">
+       <img src="{{ url_for('static', filename='images/Ivan.jpeg') }}" alt="Developer 1">
+       <h3>Ivan Nenadovic</h3>
+       <p><i class="fa-solid fa-leaf"></i> 21 years old from Bergen</p>
+       <p><i class="fa-solid fa-leaf"></i> 3rd Year student at HVL</p>
+       <a class="btn_developers" href="#" target="_blank">Curriculum</a>
+     </div>
 
-<!-- Methodology -->
-<a href="{{ url_for('methodology.methodology_home') }}" 
-   class="team_box methodology_box" 
-   style="text-decoration: none;">
-  <h3>Methodology</h3>
-</a>
+     <!-- Developer 2 -->
+     <div class="box">
+       <img src="{{ url_for('static', filename='images/Danny.jpeg') }}" alt="Developer 2">
+       <h3>Danny Hoang Nguyen</h3>
+       <p><i class="fa-solid fa-leaf"></i> 21 years old from Bergen</p>
+       <p><i class="fa-solid fa-leaf"></i> 3rd Year student at HVL</p>
+       <a class="btn_developers" href="#" target="_blank">Curriculum</a>
+     </div>
 
-<!-- About Us -->
-<a href="{{ url_for('about_us.about_us_home') }}" 
-   class="team_box about_us_box" 
-   style="background: url('{{ url_for('static', filename='icons/Grayercement.png') }}') center center / cover no-repeat; text-decoration: none;">
-  <h3>About Us</h3>
-</a>
-      </div>
-    </div>
-  </div>
+     <!-- Developer 3 -->
+     <div class="box">
+   <img src="{{ url_for('static', filename='images/Håvard.jpeg') }}" alt="Developer 3">
+       <h3>Håvard Heggebø Tveita</h3>
+       <p><i class="fa-solid fa-leaf"></i> 21 years old from Ølen</p>
+       <p><i class="fa-solid fa-leaf"></i> 3rd Year student at HVL</p>
+       <a class="btn_developers" href="#" target="_blank">Curriculum</a>
+     </div>
+
+     <!-- Developer 4 -->
+     <div class="box">
+       <img src="{{ url_for('static', filename='images/William.jpeg') }}" alt="Developer 4">
+       <h3>William Borøy</h3>
+       <p><i class="fa-solid fa-leaf"></i> 23 years old from Kristiansand</p>
+       <p><i class="fa-solid fa-leaf"></i> 3rd Year student at HVL</p>
+       <a class="btn_developers" href="#" target="_blank">Curriculum</a>
+     </div>
+
+     <!-- Developer 5 -->
+     <div class="box">
+       <img src="{{ url_for('static', filename='images/Sigurd.jpeg') }}" alt="Developer 5">
+       <h3>Sigurd Linde</h3>
+       <p><i class="fa-solid fa-leaf"></i> 22 years old from Bergen</p>
+       <p><i class="fa-solid fa-leaf"></i> 3rd Year student at HVL</p>
+       <a class="btn_developers" href="#" target="_blank">Curriculum</a>
+     </div>
+
+     <!-- Developer 6 -->
+     <div class="box">
+       <img src="{{ url_for('static', filename='images/Helena.jpg') }}" alt="Developer 6">
+       <h3>Helena Snøfugl Skarholt</h3>
+       <p><i class="fa-solid fa-leaf"></i> 21 years old from Trondheim</p>
+       <p><i class="fa-solid fa-leaf"></i> 2nd Year student at HVL</p>
+       <a class="btn_developers" href="#" target="_blank">Curriculum</a>
+     </div>
+
+     <!-- Developer 7 -->
+     <div class="box">
+       <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="Developer 7">
+       <h3>Celine Sommerfelt</h3>
+       <p><i class="fa-solid fa-leaf"></i> 24 years old from Oslo</p>
+       <p><i class="fa-solid fa-leaf"></i> 2nd Year student at HVL</p>
+       <a class="btn_developers" href="#" target="_blank">Curriculum</a>
+     </div>
+   </div>
+ </div>
 </section>
 
 
