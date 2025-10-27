@@ -1,265 +1,57 @@
 /*Container register header*/
+/*color=dark*/
 .register_section_css {
   display: flex;
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
-  min-height: 100vh;
-  padding: 40px 0;
+  background: #9fa7bf;
   }
-
-/* Navbar text color override for dark background pages */
-.register_section_css ~ * .carbon_app_navbar a,
-body:has(.register_section_css) .carbon_app_navbar a {
-  color: var(--text-white) !important;
-}
-
-body:has(.register_section_css) .carbon_app_navbar a:hover {
-  color: var(--text-light) !important;
-}
-
-body:has(.register_section_css) .carbon_app_navbar .text-logo {
-  color: var(--text-white) !important;
-}
-
+  
   .register_section_css .container {
   display: flex;
-  background: transparent;
+  background: #9fa7bf;
   }
-
+  
   .register_section_css .container {
     display: flex;
     align-items: start;
     justify-content: space-between;
   }
-
+      /*color=dark*/
   .register_section_css .container .box {
     flex: 1;
-    background: var(--white);
-    color: var(--text-white);
+    background: #fff;
+    color: #fff;
     border-radius: 2px;
     margin: 20px 10px;
     padding: 15px 20px;
     text-align:center;
   }
-
+  
   .register_section_css .container  .box:nth-of-type(1) {
     flex-grow:1;
-    background: transparent;
-    color: var(--text-white);
+    background: #9fa7bf;
+    color: #fff;
     border-radius: 10px;
     margin: 0px 0px;
     padding: 0px 0px;
     text-align:left;
   }
-
+  
   .register_section_css .container  .box:nth-of-type(2) {
     flex-grow:3;
-    background: linear-gradient(135deg, rgba(15, 76, 58, 0.95) 0%, rgba(26, 58, 46, 0.95) 100%);
-    backdrop-filter: blur(20px);
-    color: var(--text-white);
-    border-radius: 16px;
-    margin: 20px 10px;
-    padding: 40px 50px;
-    text-align:center;
-    box-shadow: var(--shadow-lg);
+  background: #49736f;
+  color: #fff;
+  border-radius: 10px;
+  margin: 20px 10px;
+  padding: 15px 20px;
+  text-align:center;
   }
-
+  
   .register_section_css .container  .box:nth-of-type(3) {
     flex-grow:1;
-    background: transparent;
-    color: var(--text-white);
-    border-radius: 10px;
-    margin: 0px 0px;
-    padding: 0px 0px;
-    text-align:left;
+  background: #9fa7bf;
+  color: #fff;
+  border-radius: 10px;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  text-align:left;
   }
-
-/* Form styling */
-.form-group {
-  margin-bottom: 1.5rem;
-  text-align: left;
-}
-
-.form-control-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: var(--text-muted);
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-.register_section_css .form-control,
-.register_section_css input.form-control,
-.register_section_css input[type="text"],
-.register_section_css input[type="email"],
-.register_section_css input[type="password"] {
-  display: block !important;
-  width: 100% !important;
-  padding: 12px 16px !important;
-  font-size: 1rem !important;
-  font-weight: 400 !important;
-  line-height: 1.5 !important;
-  color: var(--text-slate) !important;
-  background-color: var(--soft-gray) !important;
-  background-clip: padding-box !important;
-  border: 2px solid rgba(34, 197, 94, 0.2) !important;
-  border-radius: 8px !important;
-  transition: all 0.3s ease !important;
-}
-
-.register_section_css .form-control:focus,
-.register_section_css input.form-control:focus,
-.register_section_css input[type="text"]:focus,
-.register_section_css input[type="email"]:focus,
-.register_section_css input[type="password"]:focus {
-  color: var(--text-slate) !important;
-  background-color: var(--lighter-gray) !important;
-  border-color: var(--primary-light) !important;
-  outline: 0 !important;
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1) !important;
-}
-
-.register_section_css .form-control::placeholder,
-.register_section_css input::placeholder {
-  color: var(--text-medium) !important;
-  opacity: 1 !important;
-}
-
-.register_section_css .form-control-lg,
-.register_section_css input.form-control-lg {
-  padding: 14px 18px !important;
-  font-size: 1.1rem !important;
-  border-radius: 10px !important;
-}
-
-/* Invalid feedback */
-.register_section_css .is-invalid {
-  border-color: #ef4444 !important;
-}
-
-.register_section_css .invalid-feedback {
-  display: block !important;
-  margin-top: 0.5rem !important;
-  font-size: 0.875rem !important;
-  color: #fca5a5 !important;
-}
-
-/* Legend styling */
-.register_section_css legend {
-  color: var(--text-light) !important;
-  font-size: 2rem !important;
-  font-weight: 700 !important;
-  margin-bottom: 2rem !important;
-  padding-bottom: 1rem !important;
-  border-bottom: 2px solid var(--border-color) !important;
-}
-
-/* Border utilities */
-.register_section_css .border-bottom {
-  border-bottom: 1px solid var(--border-color) !important;
-}
-
-.register_section_css .border-top {
-  border-top: 1px solid var(--border-color) !important;
-  color: var(--text-muted) !important;
-}
-
-.register_section_css .border-top a {
-  color: var(--primary-light) !important;
-  text-decoration: none !important;
-  font-weight: 600 !important;
-  transition: color 0.3s ease !important;
-}
-
-.register_section_css .border-top a:hover {
-  color: var(--primary-green) !important;
-  text-decoration: underline !important;
-}
-
-/* Button styling */
-.register_section_css .btn {
-  padding: 12px 32px !important;
-  font-size: 1.1rem !important;
-  font-weight: 600 !important;
-  border-radius: 10px !important;
-  border: none !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-  text-decoration: none !important;
-  display: inline-block !important;
-}
-
-.register_section_css .btn-outline-info {
-  background: var(--primary-green) !important;
-  color: var(--text-white) !important;
-  border: 2px solid transparent !important;
-  box-shadow: var(--shadow-sm) !important;
-}
-
-.register_section_css .btn-outline-info:hover {
-  background: var(--secondary-green) !important;
-  transform: translateY(-2px) !important;
-  box-shadow: var(--shadow-md) !important;
-}
-
-/* Checkbox styling */
-.register_section_css .form-check {
-  text-align: left !important;
-  margin-bottom: 1rem !important;
-}
-
-.register_section_css .form-check-input {
-  margin-right: 0.5rem !important;
-  cursor: pointer !important;
-}
-
-.register_section_css .form-check-label {
-  color: var(--text-muted) !important;
-  cursor: pointer !important;
-}
-
-/* Alert styling */
-.register_section_css .alert {
-  padding: 1rem 1.25rem !important;
-  margin-bottom: 1.5rem !important;
-  border-radius: 8px !important;
-  font-weight: 500 !important;
-}
-
-.register_section_css .alert-danger {
-  background-color: #fee2e2 !important;
-  color: #991b1b !important;
-  border: 1px solid #fca5a5 !important;
-}
-
-.register_section_css .alert-success {
-  background-color: #d1fae5 !important;
-  color: #065f46 !important;
-  border: 1px solid #6ee7b7 !important;
-}
-
-.register_section_css .alert-info {
-  background-color: #dbeafe !important;
-  color: #1e40af !important;
-  border: 1px solid #93c5fd !important;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .register_section_css .container {
-    flex-direction: column;
-  }
-
-  .register_section_css .container .box:nth-of-type(1),
-  .register_section_css .container .box:nth-of-type(3) {
-    display: none;
-  }
-
-  .register_section_css .container .box:nth-of-type(2) {
-    margin: 20px;
-    padding: 30px 25px;
-  }
-
-  legend {
-    font-size: 1.75rem;
-  }
-}
