@@ -1,15 +1,15 @@
 /* Hero / Header Section */
 .section_header_home {
-   background: linear-gradient(135deg, #b9eccd, #8cd6aa);
+   background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green) 100%);
    position: relative;
-   color: #fff;
+   color: var(--text-white);
    height: 60vh;
    display: flex;
    align-items: center;
    justify-content: center;
    text-align: center;
    overflow: hidden;
-   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+   box-shadow: var(--shadow-md);
 }
 
 
@@ -36,24 +36,24 @@
 
 
 .section_header_home h1 .highlight {
-    color: #006401;
+    color: var(--primary-dark);
 }
 
 
 .section_header_home p {
    font-size: 1.2rem;
    line-height: 1.7;
-   color: #f4f4f4;
+   color: var(--text-white);
    max-width: 700px;
    margin: 0 auto;
    text-align: center;
-   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 
 /* Team Section */
 .section_developers {
-   background-color: #ffffff;
+   background-color: var(--light-bg);
    padding: 80px 20px;
    text-align: center;
 }
@@ -62,13 +62,13 @@
 .section_developers h1 {
    font-size: 2.5rem;
    margin-bottom: 20px;
-   color: #2c2c2c;
+   color: var(--text-dark);
 }
 
 
 .section_developers p {
    font-size: 1rem;
-   color: #444;
+   color: var(--text-medium);
    max-width: 800px;
    margin: 0 auto 50px auto;
    text-align: center;
@@ -86,12 +86,12 @@
 
 /* Individual Developer Card */
 .developers .box {
-   background: #f8f8f8;
+   background: var(--white);
    border-radius: 15px;
    width: 280px;
    padding: 20px;
    text-align: center;
-   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+   box-shadow: var(--shadow-md);
    transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -108,14 +108,14 @@
 .developers .box h3 {
    font-size: 1.3rem;
    margin-bottom: 10px;
-   color: #006400;
+   color: var(--primary-dark);
 }
 
 
 .developers .box p {
    font-size: 0.95rem;
    line-height: 1.4;
-   color: #333;
+   color: var(--text-dark);
    margin-bottom: 15px;
 }
 
@@ -124,36 +124,38 @@
 .btn_developers {
    display: inline-block;
    padding: 10px 20px;
-   background-color: #7cc785;
-   color: #fff;
+   background: var(--primary-green);
+   color: var(--text-white);
    border-radius: 25px;
    font-weight: 600;
    font-size: 0.9rem;
-   transition: background-color 0.3s;
+   transition: all 0.3s;
 }
 
 
 .btn_developers:hover {
-   background-color: #68b071;
+   background: var(--secondary-green);
    text-decoration: none;
+   transform: translateY(-2px);
+   box-shadow: var(--shadow-sm);
 }
 
 
 /* Developer Card Hover Effect */
 .developers .box:hover {
    transform: translateY(-5px);
-   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+   box-shadow: var(--shadow-lg);
 }
 
 
 .developers .box {
-   border: 1px solid #e0e0e0;
+   border: 1px solid rgba(34, 197, 94, 0.2);
    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 
 .developers .box:hover {
-   border-color: #7cc785;
+   border-color: var(--primary-light);
 }
 
 
