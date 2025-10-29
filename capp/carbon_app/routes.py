@@ -1,12 +1,17 @@
 from flask import render_template, Blueprint
+from flask_login import login_required
+from capp.models import Transport
 
 carbon_app=Blueprint('carbon_app',__name__)
 
+
 @carbon_app.route('/carbon_app')
+@login_required
 def carbon_app_home():
-    return render_template('carbon_app/carbon_app.html', title='Carbon App')
+    return render_template('carbon_app/carbon_app.html', title='carbon_app')
 
 @carbon_app.route('/carbon_app/new_entry')
+@login_required
 def new_entry():
     return render_template('carbon_app/new_entry.html', title='new_entry')
 

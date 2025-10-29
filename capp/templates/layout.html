@@ -27,16 +27,12 @@
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='methodology.css') }}">
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='carbon_app.css') }}">
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='user.css') }}">
-      <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='about_us.css') }}">
 
       <!-- To activate media queries in devices -->
       <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1">
 
-      <!-- Favicon -->
-      <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='icons/carbon_app.svg') }}">
-
         {% if title %}
-            <title>{{ title }} - FootPrint</title>
+            <title>{{ title }}</title>
         {% else %}
             <title>FootPrint</title>
         {% endif %}
@@ -53,11 +49,9 @@
               </h1>
               <nav>
                 <ul>
+                    {% if current_user.is_authenticated %}
                     <li>
-                      <a href="{{url_for('users.register')}}">Register</a>
-                    </li>
-                    <li>
-                      <a href="{{url_for('users.login')}}">Login</a>
+                        <a href="{{url_for('home.home_home')}}">Home</a>
                     </li>
                     <li>
                         <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
@@ -66,8 +60,25 @@
                         <a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a>
                     </li>
                     <li>
-                        <a href="{{url_for('about_us.about_us_home')}}">About Us</a>
+                        <a href="{{url_for('users.logout')}}">Logout</a>
                     </li>
+                    {% else %}
+                    <li>
+                        <a href="{{url_for('home.home_home')}}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
+                    </li>
+                    <li>
+                      <a href="{{url_for('users.register')}}">Register</a>
+                    </li>
+                    <li>
+                      <a href="{{url_for('users.login')}}">Login</a>
+                    </li>
+                    <li>
+                      <a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a>
+                    </li>
+                    {% endif %}
                 </ul>
               </nav> 
             </div>
@@ -80,7 +91,7 @@
           <div class="container">
             <div class="footer">
               <h1>
-                Footprint 
+                FootPrint 
                 <a href="#">
                   <i class="fa-solid fa-circle-up" style="color: #568c63"></i>
                 </a>
@@ -102,6 +113,17 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <!-- Auto-dismiss flash messages after 5 seconds -->
+        <script>
+            setTimeout(function() {
+                var flashMessage = document.getElementById('flash-message');
+                if (flashMessage) {
+                    var bsAlert = new bootstrap.Alert(flashMessage);
+                    bsAlert.close();
+                }
+            }, 5000); // 5000 milliseconds = 5 seconds
+        </script>
         
     </body>
 </html>
