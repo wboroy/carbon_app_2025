@@ -115,7 +115,7 @@ body {
 }
 
 .impact_card {
-  background: red;
+  background: rgb(4, 4, 4);
   color: #fff;
   padding: 40px;
   border-radius: 0;
