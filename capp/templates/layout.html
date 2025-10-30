@@ -27,7 +27,10 @@
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='methodology.css') }}">
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='carbon_app.css') }}">
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='user.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='about_us.css') }}">
 
+      {% block styles %}{% endblock %} 
+        
       <!-- To activate media queries in devices -->
       <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1">
 
@@ -44,31 +47,42 @@
             <div class="carbon_app_navbar">
               <h1 class="logo">
                 <a href="{{url_for('home.home_home')}}" class="logo-link">
-                  <span class="text-logo"><i class="fa-solid fa-bus"></i> </span>
+                  <span class="text-logo">
+                    <span class="logo-foot">Foot</span><span class="logo-print">Print</span>
+                    <i class="fa-solid fa-leaf"></i>
+                  </span>
                 </a>
               </h1>
               <nav>
                 <ul>
                     {% if current_user.is_authenticated %}
                     <li>
-                        <a href="{{url_for('home.home_home')}}">Home</a>
+                      <a href="{{url_for('home.home_home')}}">Home</a>
                     </li>
                     <li>
-                        <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
+                      <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
                     </li>
                     <li>
-                        <a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a>
+                      <a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a>
                     </li>
                     <li>
-                        <a href="{{url_for('users.logout')}}">Logout</a>
+                      <a href="{{ url_for('about_us.about_us_home') }}">About Us</a>
+                    </li>
+
+                    <li>
+                      <a href="{{url_for('users.logout')}}">Logout</a>
                     </li>
                     {% else %}
                     <li>
-                        <a href="{{url_for('home.home_home')}}">Home</a>
+                      <a href="{{url_for('home.home_home')}}">Home</a>
                     </li>
                     <li>
-                        <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
+                      <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
                     </li>
+                    <li>
+                      <a href="{{ url_for('about_us.about_us_home') }}">About Us</a>
+                    </li>
+
                     <li>
                       <a href="{{url_for('users.register')}}">Register</a>
                     </li>
@@ -126,4 +140,5 @@
         </script>
         
     </body>
+
 </html>

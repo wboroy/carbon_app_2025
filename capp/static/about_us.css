@@ -36,7 +36,7 @@
 
 
 .section_header_home h1 .highlight {
-    color: #006401;
+   color: green;
 }
 
 
@@ -180,4 +180,11 @@
        width: 90%;
    }
 }
-
+@media (max-width: 480px) {
+   .section_header_home h1 {
+       font-size: 1.5rem;
+   }
+   .section_header_home p {
+       font-size: 0.9rem;
+   }
+}
