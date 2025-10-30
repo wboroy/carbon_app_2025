@@ -51,34 +51,18 @@
               <nav>
                 <ul>
                     {% if current_user.is_authenticated %}
-                    <li>
-                        <a href="{{url_for('home.home_home')}}">Home</a>
-                    </li>
-                    <li>
-                        <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
-                    </li>
-                    <li>
-                        <a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a>
-                    </li>
-                    <li>
-                        <a href="{{url_for('users.logout')}}">Logout</a>
-                    </li>
+                    <li><a href="{{url_for('home.home_home')}}">Home</a>  </li>
+                    <li><a href="{{url_for('methodology.methodology_home')}}">Methodology</a></li>
+                    <li><a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a></li>
+		            <li><a href="{{ url_for('about_us.about_us_home') }}">About Us</a></li>
+                    <li><a href="{{url_for('users.logout')}}">Logout</a></li>
                     {% else %}
-                    <li>
-                        <a href="{{url_for('home.home_home')}}">Home</a>
-                    </li>
-                    <li>
-                        <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
-                    </li>
-                    <li>
-                      <a href="{{url_for('users.register')}}">Register</a>
-                    </li>
-                    <li>
-                      <a href="{{url_for('users.login')}}">Login</a>
-                    </li>
-                    <li>
-                      <a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a>
-                    </li>
+                    <li><a href="{{url_for('home.home_home')}}">Home</a></li>
+                    <li><a href="{{url_for('users.register')}}">Register</a></li>
+                    <li><a href="{{url_for('users.login')}}">Login</a></li>
+                    <li><a href="{{url_for('methodology.methodology_home')}}">Methodology</a></li>
+                    <li><a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a></li>
+		            <li><a href="{{ url_for('about_us.about_us_home') }}">About Us</a></li>
                     {% endif %}
                 </ul>
               </nav> 
@@ -129,3 +113,4 @@
     </body>
 
 </html>
+
