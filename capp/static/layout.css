@@ -21,6 +21,24 @@ Navbar (a menu): #0f4c3a
   color: #0f4c3a!important;
 }
 
+/* Logo Color Styling */
+.logo-foot {
+  color: #006400; /* Dark green for "Foot" */
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo-print {
+  color: #ffffff; /* Lighter green for "Print" */
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.fa-solid.fa-leaf {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  color: #006400;
+}
+
 /* Font imports */
 
 body {
