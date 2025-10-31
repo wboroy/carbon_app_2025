@@ -1,13 +1,13 @@
 /* Colors */
 /* Rainy theme 5 -Green Digitalization Course and Students Apps-:
-Navbar (background): #8bbbd9
-Navbar (a hover): #466fa6
-Navbar (logo): #568c63
-Navbar (a menu): #2a4359
+Navbar (background): #e2e8f0
+Navbar (a hover): #16a34a
+Navbar (logo): #0f4c3a
+Navbar (a menu): #0f4c3a
 */
 
 /* Google fonts Roboto  */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;550;600;700&display=swap');
 
 /* CSS utilities */
 *{
@@ -18,7 +18,7 @@ Navbar (a menu): #2a4359
 
 /* Carbon App logo */
 .text-logo {
-  color: #006400;
+  color: #0f4c3a!important;
 }
 
 /* Logo Color Styling */
@@ -42,7 +42,8 @@ Navbar (a menu): #2a4359
 /* Font imports */
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Times New Roman", Times, serif !important;
+
   background: url('../static/icons/Forestphoto.png') center top / cover no-repeat, 
               linear-gradient(to bottom right, #e6f4ea, #c5c8d9);
   line-height: 1.6;
@@ -60,7 +61,7 @@ ul {
   font-size: 400;
 }
 a {
-  color: #333;
+  color: #0f4c3a;
   text-decoration: none;
 }
 h1, h2 {
@@ -77,7 +78,7 @@ img {
 
 /* Navbar  */
 .section_carbon_app_navbar {
-  background-color:#b8eccc;
+  background-color: #16a34a;
 }
 .carbon_app_navbar {
   display: flex;
@@ -89,16 +90,18 @@ img {
   padding: 0 0px;
 }
 .carbon_app_navbar a {
-  color: #2a4359;
+  color: #0f4c3a;
   padding: 10px 20px;
   margin: 0 5px;
   font-size: 20px;
   text-decoration: none;
   border-radius: 5px;
   font-weight: 500;
+  font-size: 1,5rem;
 }
 .carbon_app_navbar a:hover{
-  border-bottom: #2a4359 4px solid;
+  border-bottom: #16a34a 0px solid;
+  color: #15803d;
 }
 .carbon_app_navbar ul {
   display: flex;
@@ -138,6 +141,21 @@ img {
   padding: 0 0px;
 }
 
+.section_carbon_app_navbar.is-overlay {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
 
 /* Media query */
 @media(max-width:768px){
@@ -154,8 +172,7 @@ img {
     flex-direction: column;
   }
   .carbon_app_navbar a:hover{
-    color: #568c63;
-    border-bottom: #2a4359 2px solid;
+    color: #10b981;
+    border-bottom: #15803d 2px solid;
   }
 }
-
