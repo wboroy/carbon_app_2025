@@ -10,6 +10,7 @@ body.home-page {
 
 /* Hoved bildet + Tittel */
 .section_header_home {
+  font-family: "Times New Roman", Times, serif !important;
   background: linear-gradient(to bottom right, #b9eccd, #8cd6aa);
   position: relative;
   color: #ffffff;
@@ -142,17 +143,28 @@ body.home-page {
   margin-top: -50px;
   position: relative;
   z-index: 10;
+  gap: 20px;
+}
+
+.info_cards_container h3 {
+    font-family: "Times New Roman", Times, serif !important;
 }
 
 .we_do_card {
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
   color: #1f2937;
-  padding: 20px;
+  padding: 40px;
   border-radius: 0;
   max-width: 450px;
   text-align: left;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   align-self: center;
+  transition: all 0.3s ease;
+}
+
+.we_do_card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transform: translateY(-3px);
 }
 
 .impact_card {
@@ -219,73 +231,56 @@ body.home-page {
     fill: #f8fafc;
 }
 
-/* Explore more (tidligere developers section) */
-.section_developers {
-  background-color: #f8fafc !important;
+.explore_section {
+  background-color: #f8fafc;
   padding: 100px 20px;
   text-align: center;
 }
 
-.developers_intro {
-  font-size: 1.1rem;
-  color: #1f2937;
-  margin-bottom: 40px;
+.explore_section p {
   text-align: center;
 }
 
-/* Team boxes (Tidligere developers) */
-.team_boxes {
+.explore_cards {
   display: flex;
   justify-content: center;
-  gap: 3%;
-  margin-top: 40px;
-}
-
-.team_box {
-  border-radius: 0;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  height: 240px; 
-  display: flex;
   align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  color: #fff;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.explore_card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   text-align: center;
-  width: 32%;
-}
-
-.team_box:hover {
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  transform: translateY(-3px);
-}
-
-.team_box h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #fff;
-}
-
-.team_box h3 a {
-  color: #fff;
+  padding: 50px 30px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #1f2937;
   text-decoration: none;
 }
 
-.team_box h3 a:hover {
-  text-decoration: underline;
+
+.explore_card i {
+  font-size: 2.5rem;
+  color: #16a34a;
+  margin-bottom: 15px;
 }
 
-/* Individuell box farge */
-.emissions_box {
-  background-color: #334155;
+.explore_card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
 }
 
-.methodology_box {
-  background-color: #16a34a;
+.explore_card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.15);
 }
 
-.about_us_box {
-  background-color: #334155;
-}
+
 .custom-shape-divider-bottom-1759941253 {
     position: relative;
     bottom: 0;
@@ -295,6 +290,7 @@ body.home-page {
     line-height: 0;
     transform: rotate(180deg);
     background-color: #f8fafc;
+    margin-bottom: -2px;
 }
 
 .custom-shape-divider-bottom-1759941253 svg {

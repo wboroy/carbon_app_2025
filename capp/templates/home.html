@@ -61,36 +61,33 @@
 </div>
 
 <!-- EXPLORE MORE / Navigasjonsbokser -->
-<section class="section_developers">
+
+<section class="explore_section">
   <div class="container text-center">
     <h2 class="developers_title">Explore More</h2>
     <p class="developers_intro">
       See the total global emissions, explore our methodology, and meet our team.
     </p>
 
-    <div class="team_boxes d-flex justify-content-center gap-3 mt-4">
-      <!-- Total Global Emissions -->
-      <div class="team_box emissions_box" style="background: url('{{ url_for('static', filename='icons/Grayercement.png') }}') center center / cover no-repeat;">
+    <div class="explore_cards">
+      <a href="#" class="explore_card">
+        <i class="fa-solid fa-globe"></i>
         <h3>Total Global Emissions</h3>
-      </div>
+      </a>
 
-<!-- Methodology -->
-<a href="{{ url_for('methodology.methodology_home') }}" 
-   class="team_box methodology_box" 
-   style="text-decoration: none;">
-  <h3>Methodology</h3>
-</a>
+      <a href="{{url_for('methodology.methodology_home')}}" class="explore_card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Methodology</h3>
+      </a>
 
-<!-- About Us -->
-<a href="{{ url_for('about_us.about_us_home') }}" 
-   class="team_box about_us_box" 
-   style="background: url('{{ url_for('static', filename='icons/Grayercement.png') }}') center center / cover no-repeat; text-decoration: none;">
-  <h3>About Us</h3>
-</a>
-      </div>
+      <a href="{{url_for('about_us.about_us_home')}}" class="explore_card">
+        <i class="fa-solid fa-people-group"></i>
+        <h3>About Us</h3>
+      </a>
     </div>
   </div>
 </section>
+
 
 
 
