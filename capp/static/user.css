@@ -7,14 +7,12 @@
   
   .register_section_css .container {
   display: flex;
-  background: #9fa7bf;
+  background: #044f17;
+  align-items: start;
+  justify-content: space-between;
   }
   
-  .register_section_css .container {
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-  }
+  
       /*color=dark*/
   .register_section_css .container .box {
     flex: 1;
