@@ -1,9 +1,15 @@
 /* Hero / Header Section */
-.section_header_home {
+.section_header_about .container {
+   padding: 0;
+   margin: 0;
+}
+
+.section_header_about {
    background: linear-gradient(135deg, #b9eccd, #8cd6aa);
    position: relative;
    color: #fff;
-   height: 60vh;
+   height: 80vh;
+   min-height: 0; 
    display: flex;
    align-items: center;
    justify-content: center;
@@ -13,20 +19,24 @@
 }
 
 
-.section_header_home .hero_overlay {
-   background: rgba(0, 0, 0, 0.1);
+
+.section_header_about .hero_overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
    width: 100%;
    height: 100%;
+   background: rgba(0, 0, 0, 0.1);
    display: flex;
-   flex-direction: column;
    align-items: center;
    justify-content: center;
-   padding: 0 20px;
    text-align: center;
+   padding: 0 20px;
 }
 
 
-.section_header_home h1 {
+
+.section_header_about h1 {
    font-size: 3.5rem;
    font-weight: 800;
    margin-bottom: 1rem;
@@ -35,12 +45,12 @@
 }
 
 
-.section_header_home h1 .highlight {
+.section_header_about h1 .highlight {
    color: green;
 }
 
 
-.section_header_home p {
+.section_header_about p {
    font-size: 1.2rem;
    line-height: 1.7;
    color: #f4f4f4;
