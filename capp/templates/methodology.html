@@ -1,0 +1,148 @@
+{% extends "layout.html" %}
+{% block content %}
+  
+<!-- Header -->
+<section class="section_header_methodology">
+    <div class="container">
+  
+      <div class="header">
+        <div class="box"> 
+          <h1 style="font-size:55px;"><span class="text-logo"> Methodology</span></h1>
+          <p style="text-align:center;">
+              Our carbon calculator is built to make climate awareness easy to understand.
+Behind every result is a simple idea — helping you see how your everyday travel choices affect the planet. By using verified data and smart calculations, the app turns your input into an estimate of your personal carbon footprint. 
+          <br>
+          <p style="text-align:center;">
+The goal is to make it easier for you to take small steps toward a greener lifestyle. Want to see the full details? Click the paper below to explore our complete methodology and data sources.
+          </p>
+          
+<div class="container_buttons_links_header">
+            <div class="btn">
+                <a href="#" class="btn btn-primary btn-lg mr-2", style="background-color:#4f964f;">Paper</a>
+            </div>
+            <div class="btn">
+                <a href="{{url_for('carbon_app.carbon_app_home')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">Carbon App</a>
+            </div>
+          </div>  
+        </div>
+        
+    </div>
+</section> 
+<!-- Methodology -->
+<section class="section_body_methodology">
+    <div class="container">
+  
+        
+        <div class="methodology" style="display:block;">
+          <br>
+          <br>
+            <h1 style="text-align:center;"> Our numbers and formulas</h1>
+          <br>
+        </div>
+
+        <!--Enumerated list (table with two columns)-->
+        <div class="methodology"> 
+            <div class="box_table2" style="height:200px;">
+                <ol start="1">
+                    <li>
+                        <h4>Mathematical expressions 1</h4>
+                        <p class="text-left">
+                            Mathematical expressions \( x = {-b \pm \sqrt{b^2-4ac} \over 2a} \) inside text.
+                            <br>
+                            Mathematical expressions outside text:
+                            \[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
+                        </p>
+                    </li>
+                </ol>                        
+            </div>
+            <div class="box_table2" style="height:200px;">
+                <ol start="2">
+                    <li>
+                        <h4>Mathematical expressions 2</h4>
+                        <p class="text-left">
+                            Mathematical expressions \( x^2 + y^2 = z^2 \) inside text.
+                            <br>
+                            Mathematical expressions outside text:
+                            \[ x^2 + y^2 = z^2 \]
+                        </p>
+                    </li>
+                </ol>
+            </div>  
+        </div>
+        <!--Enumerated list (table with two columns)-->
+        
+        <!--Enumerated list (table with one column)-->
+        <div class="section_footer_methodology">              
+            <div class="box_table1">
+              <ol>
+                  <li>
+                      <h4>Human Power</h4>
+                     <p class="text-left">
+                        The most environmentally friendly forms of transport are the ones powered by human energy. We do not emit greenhouse gases when walking or cycling. In addition to being more environmentally friendly, these modes of transport also contribute to better health and less noise. 
+                        <br>
+                        <br>
+                        Walk/bike emission factor = 0 g/km
+                      </p>
+                    </li>
+              </ol>
+                      
+            </div>
+            <div class="box_table1">
+                <ol>
+                    <li>
+                        <h4>Private Transport</h4>
+                        <p class="text-left">
+                        Car (diesel) emission factor: 229 g/km
+                        <br>
+                        Car (petrol) emission factor: 198 g/km
+                        <br>
+                        Car (electric) emission factor: 59 g/km
+                        <br>
+                        Motorcycle emission factor: 95 g/km
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Cars</h4>
+                        <p class="text-left">
+                            ...
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Planes</h4>
+                        <p class="text-left">
+                            ...
+                        </p>
+                    </li>
+                </ol>                        
+            </div>
+            <div class="box_table1">
+               <ol>
+                    <li>
+                        <h4>Public Transport</h4>
+                        <p class="text-left"> 
+                          Bus (electric) emission factor: 13 g/passenger-km
+                            <br>
+                          Bus (diesel) emission factor: 30 g/passenger-km
+                          <br>
+                            <br>
+                          Train (electric) emission factor: 7 g/passenger-km
+                            <br>
+                          Train (diesel) emission factor: 91 g/passenger-km
+                            <br>
+                              <br>
+                          Airplane (economy) emission factor: 127 g/passenger-km
+                            <br>
+                          Airplane (business) emission factor: 284 g/passenger-km
+                            <br>
+                              <br>
+                          Ferry (diesel) emission factor: 186 g/passenger-km
+                            <br>
+                          Ferry (electric) emission factor: 23 g/passenger-km
+                        </p>
+            </div>  
+        </div>
+        
+      
+    </div>
+</section>
+{% endblock content %}
