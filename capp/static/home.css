@@ -74,7 +74,6 @@ body.home-page {
 }
 
 
-
 .hero_content p {
   max-width: 700px;
   margin: 0 auto 2rem;
@@ -149,6 +148,10 @@ body.home-page {
 .info_cards_container h3 {
     font-family: "Times New Roman", Times, serif !important;
 }
+
+.developers_title{
+    font-family: "Times New Roman", Times, serif !important;
+} 
 
 .we_do_card {
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);

@@ -2,12 +2,14 @@
 /*color=dark*/
 .register_section_css {
   display: flex;
-  background: #9fa7bf;
+  background: rgb(2, 57, 22);
   }
   
+
+
   .register_section_css .container {
   display: flex;
-  background: #9fa7bf;
+  background: rgb(2, 57, 22);
   }
   
   .register_section_css .container {
@@ -15,6 +17,13 @@
     align-items: start;
     justify-content: space-between;
   }
+
+
+.register_section_css .form-group {
+  margin-bottom: 30px; 
+}
+
+
       /*color=dark*/
   .register_section_css .container .box {
     flex: 1;
