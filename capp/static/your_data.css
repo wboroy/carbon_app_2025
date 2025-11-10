@@ -1,0 +1,68 @@
+.table_main{
+    background-color: white;
+    padding: 60px 0;
+    min-height: 80vh;
+
+}
+
+.main_menu {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 40px 0 20px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.btn_carbon_app_new_entry_main {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 28px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn_carbon_app_new_entry_main:hover{
+    background-color: #0056b3;
+    color: #fff;
+    transform: scale(1.03);
+}
+
+.table {
+    width: 90%;
+    margin: 40px auto;
+
+}
+
+.table thead {
+    background-color: black;
+    color: white;
+}
+
+.table th,
+.table td {
+    padding: 14px 18px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.table tbody tr:hover {
+    background-color: #f0f6ff;
+}
+
+.btn-outline-danger {
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    transition: all 0.2 ease-in-out;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.table_main {
+    padding-bottom: 80px;
+}
