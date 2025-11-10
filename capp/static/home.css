@@ -27,7 +27,7 @@ body.home-page {
   background-repeat: no-repeat;
 }
 
-/* Fade + slide up animation */
+/* Gli oppover animation */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -58,7 +58,7 @@ body.home-page {
 /* Tekst og bilde */
 
 .hero_content {
-  margin-top: 240px; /* move everything up */
+  margin-top: 100px; /* move everything up */
 }
 
 .hero_content h1 {
@@ -207,6 +207,7 @@ body.home-page {
   transform: translateX(4px);
 }
 
+/* bølgete bakgrunn */
 .custom-shape-divider-top-1759939526 {
   margin-top: 90px!important;  
   position: relative;
