@@ -58,9 +58,6 @@
                 <ul>
                     {% if current_user.is_authenticated %}
                     <li>
-                        <a href="{{url_for('home.home_home')}}">Home</a>
-                    </li>
-                    <li>
                         <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
                     </li>
                       <li>
@@ -73,9 +70,6 @@
                         <a href="{{url_for('users.logout')}}">Logout</a>
                     </li>
                     {% else %}
-                    <li>
-                        <a href="{{url_for('home.home_home')}}">Home</a>
-                    </li>
                     <li>
                         <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
                     </li>
@@ -143,4 +137,5 @@
     </body>
 
 </html>
+
 
