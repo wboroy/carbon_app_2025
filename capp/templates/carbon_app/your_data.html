@@ -18,6 +18,31 @@
         </div>
     </section> 
 
+<!-- two emissions graphs-->
+    <section class="two_emissions_graphs">
+        <div class="container">
+
+            <!-- TOP ROW -->
+            <div class="box">
+                <canvas id="emissions_by_transport"></canvas>
+            </div>
+            <div class="box">
+                <canvas id="over_time_emissions"></canvas>
+            </div>
+
+            <!-- BOTTOM ROW -->
+            <div class="box">
+                <canvas id="kms_by_transport"></canvas>
+            </div>
+            <div class="box">
+                <canvas id="kms_over_time_chart"></canvas>
+            </div>
+
+        </div>
+    </section>
+
+
+
     <!-- Table Section -->
     <section class="table_main">
     <div class="container">
@@ -71,4 +96,137 @@
       </div>
     </section>
 
+    <script>
+              // Emissions
+        // Emissions
+        let emission_transport_data = JSON.parse('{{ emissions_by_transport | safe }}');
+        let transport_labels = JSON.parse('{{ transport_labels | safe }}');
+        Chart.scaleService.updateScaleDefaults('linear', {
+                ticks: {
+                    min: 0
+                }
+        });
+    
+    
+        let emissions_by_transport_chart = new Chart(document.getElementById("emissions_by_transport"), {
+
+                type: 'pie',
+                data: {
+                labels: transport_labels,
+                    datasets: [{
+                        data: emission_transport_data,
+                        backgroundColor: ['#9ac2be', '#f2e3b6', '#f2c299',
+                            '#f2935c', '#5fd9cd', '#f2d95c', '#f2b84b', '#f27979' ],
+    
+                        borderWidth: 1,
+                        hoverBorderColor: "black",
+                        hoverBorderWidth: 2,
+                        hoverBackgroundColor: 'rgba(154, 245, 140)',
+                        pointHoverRadius: 5
+                    }],
+                },
+                options: {
+                        title: {
+                            display: true,
+                                text: "Emissions by type of transport (5 last days)",
+                                    fontColor: "black",
+                                    fontSize: 20,
+                        },
+                        legend: {
+                            position: "right",
+                                labels: {
+                                fontColor: "black"
+                            },
+                            display: true,
+                        },
+    
+                        elements: {
+                            hitRadius: 3,
+                        }
+                }
+            })
+
+        over_time_emissions = JSON.parse('{{over_time_emissions | safe}}')
+        labels = JSON.parse('{{ dates_label  | safe}}')
+
+        new Chart(document.getElementById("over_time_emissions"), {
+                type: "line",
+                data:
+                {
+                    labels: labels,
+                    datasets: [
+                        {
+                        label: "Individual Emissions (5 past days)",                           
+                        data: over_time_emissions,
+                        fill: false,
+                        borderColor: '#5fd9cd',
+                        lineTension: 0.1
+                        }
+                ]
+                },                    
+                options: {}
+            });  
+
+        // PIE CHART — Kilometers by Transport
+
+        let kms_transport_data = JSON.parse('{{ kms_by_transport | safe }}');
+        let kms_transport_labels = JSON.parse('{{ kms_labels | safe }}');
+
+        new Chart(document.getElementById("kms_by_transport"), {
+            type: 'pie',
+            data: {
+                labels: kms_transport_labels,
+                datasets: [{
+                    data: kms_transport_data,
+                    backgroundColor: [
+                        '#9ac2be', '#f2e3b6', '#f2c299',
+                        '#f2935c', '#5fd9cd', '#f2d95c',
+                        '#f2b84b', '#f27979'
+                    ],
+                    borderWidth: 1,
+                    hoverBorderColor: "black",
+                    hoverBorderWidth: 2
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "Kilometers by Transport (5 days)",
+                    fontColor: "black",
+                    fontSize: 20
+                },
+                legend: {
+                    position: "right",
+                    labels: { fontColor: "black" }
+                }
+            }
+        });
+
+
+        kms_data = JSON.parse('{{ kms_over_time | safe }}');
+
+        new Chart(document.getElementById("kms_over_time_chart"), {
+            type: "line",
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: "Kilometers (5 past days)",
+                        data: kms_data,
+                        fill: false,
+                        borderColor: "#f2935c",
+                        lineTension: 0.1
+                    }
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "Kilometers traveled (past 5 days)",
+                    fontColor: "black",
+                    fontSize: 20
+                }
+            }
+        });
+    </script>
 {% endblock content %}

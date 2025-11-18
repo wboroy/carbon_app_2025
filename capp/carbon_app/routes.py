@@ -4,17 +4,20 @@ from capp.models import Transport
 from capp import db
 from datetime import timedelta, datetime, date
 from capp.carbon_app.forms import TransportForm
+import json
 
 carbon_app=Blueprint('carbon_app',__name__)
 
 
 efco2={'Bus':{'Diesel':0.10,'CNG':0.08, 'Petrol':0.15,'No Fossil Fuel':0},
 
-       'Car':{'Diesel':2, 'Petrol': 3}
+       'Car':{'Diesel':2, 'Petrol': 3},
+       'Motorbike':{'Diesel':2, 'Petrol':2}
 }
 
 efch4={'Bus':{'Diesel':0.20,'CNG':0.08, 'Petrol':0.30,'No Fossil Fuel':0},
-       'Car':{'Diesel':0.20,'Petrol':0.3}
+       'Car':{'Diesel':0.20,'Petrol':0.3},
+       'Motorbike':{'Diesel':2,'Petrol':2}
 }
 
 
@@ -26,7 +29,7 @@ def carbon_app_home():
     if form.validate_on_submit():
         kms=form.kms.data
         fuel=form.fuel_type.data
-        transport= form. transport.data
+        transport= form.transport.data
         co2=float(kms)*efco2[transport][fuel]
         ch4=float(kms)*efch4[transport][fuel]
         total=co2+ch4
@@ -48,7 +51,64 @@ def your_data():
     entries = Transport.query.filter_by(author=current_user).\
         filter(Transport.date>(datetime.now()-timedelta(days=5))).\
         order_by(Transport.date.desc()).order_by(Transport.transport.asc()).all()
-    return render_template('carbon_app/your_data.html', title='your_data', entries=entries)
+    
+    emissions_by_transport = db.session.query(db.func.sum(Transport.total), Transport.transport). \
+        filter(Transport.date > (datetime.now() - timedelta(days=5))).filter_by(author=current_user). \
+        group_by(Transport.transport).order_by(Transport.transport.asc()).all()
+
+    # CLEANED transport emission pie chart
+    emission_dict = {}
+    for value, transport in emissions_by_transport:
+        emission_dict[transport] = value
+
+    emission_transport = list(emission_dict.values())
+    second_tuple_elements = list(emission_dict.keys())
+
+    #Emissions by date (individual)
+    emissions_by_date = db.session.query(db.func.sum(Transport.total), Transport.date). \
+        filter(Transport.date > (datetime.now() - timedelta(days=5))).filter_by(author=current_user). \
+        group_by(Transport.date).order_by(Transport.date.asc()).all()
+    over_time_emissions = []
+    dates_label = []
+    for total, date in emissions_by_date:
+        dates_label.append(date.strftime("%m-%d-%y"))
+        over_time_emissions.append(total)    
+
+        # Kilometers by date (individual)
+    kms_by_date = db.session.query(db.func.sum(Transport.kms), Transport.date). \
+        filter(Transport.date > (datetime.now() - timedelta(days=5))).filter_by(author=current_user). \
+        group_by(Transport.date).order_by(Transport.date.asc()).all()
+
+    kms_over_time = []
+    for kms, date in kms_by_date:
+        kms_over_time.append(kms)
+
+    #for kilometers     
+    kms_by_transport = db.session.query(db.func.sum(Transport.kms), Transport.transport). \
+        filter(Transport.date > (datetime.now() - timedelta(days=5))).filter_by(author=current_user). \
+        group_by(Transport.transport).order_by(Transport.transport.asc()).all()
+
+    # CLEANED kms transport pie chart
+    kms_dict = {}
+    for value, transport in kms_by_transport:
+        kms_dict[transport] = value
+
+    kms_transport = list(kms_dict.values())
+    kms_second = list(kms_dict.keys())
+
+
+    return render_template(
+        'carbon_app/your_data.html', 
+        title='your_data', 
+        entries=entries,
+        emissions_by_transport=json.dumps(emission_transport),
+        transport_labels=json.dumps(second_tuple_elements),
+        over_time_emissions=json.dumps(over_time_emissions),
+        dates_label=json.dumps(dates_label),
+        kms_over_time=json.dumps(kms_over_time),
+        kms_by_transport=json.dumps(kms_transport),
+        kms_labels=json.dumps(kms_second))
+    
 
 #Sletter fra databasen hvis brukeren ønsker det
 @carbon_app.route('/carbon_app/delete_emissions/<int:entry_id>')
@@ -58,5 +118,3 @@ def delete_emission(entry_id):
     db.session.commit()
     flash("Entry deleted","sucsess")
     return redirect(url_for('carbon_app.your_data'))
-
-    

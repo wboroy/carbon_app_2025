@@ -2,6 +2,7 @@
     background-color: white;
     padding: 60px 0;
     min-height: 80vh;
+    overflow-x: auto;
 
 }
 
@@ -22,6 +23,36 @@
     padding: 12px 28px;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
+}
+
+.two_emissions_graphs {
+  padding: 40px 0;
+  background: white;
+}
+
+.two_emissions_graphs .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+
+.two_emissions_graphs .box {
+  width: 45%;
+  min-height: 300px;
+  min-width: 350px;
+  background:gray;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.two_emissions_graphs canvas {
+  width: 100% !important;
+  height: auto !important;
 }
 
 .btn_carbon_app_new_entry_main:hover{
