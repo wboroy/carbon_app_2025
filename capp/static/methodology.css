@@ -22,16 +22,17 @@ ol {
   background-color:hsl(68, 51%, 85%);
   min-height: 70vh;
   display:flex;
+  font-weight: bold;
  }
 .header {
   display: flex;  
   align-items: start;
-  background:hsl(68, 51%, 85%);
+  background:transparent;
 }
 .header .box {
   flex: 1;
-  background: hsl(68, 51%, 85%);
-  color: #000000;
+  background: transparent !important;
+  color: #ffffff;
   border-radius: 0px;
   margin: 20px;
   padding: 15px 20px;
@@ -49,7 +50,7 @@ ol {
 
 /* Section methodology */
 .section_body_methodology {
-  background-color:#ffffff;
+  background-color:#ffe3ae;
   
 }
 /* Bakgrunn formel box */
