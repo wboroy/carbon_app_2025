@@ -46,7 +46,7 @@
         
     </head>
   
-{% set is_home = request.endpoint and (request.endpoint == 'home.home_home' or request.endpoint.startswith('home.')) %}
+{% set is_home = request.endpoint.startswith('home.') %}
     <body class="{% if is_home %}home-page{% endif %}">
 
         <section class="section_carbon_app_navbar {% if is_home %}is-overlay{% endif %}">

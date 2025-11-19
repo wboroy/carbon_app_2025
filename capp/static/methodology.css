@@ -40,30 +40,14 @@ ol {
   align-items: center;
   justify-content: center;
 }
-.header .box:nth-of-type(1) {
-  flex-grow:2;
-}
-.header .box:nth-of-type(2) {
-  flex-grow:1;
-}
+
 .container_buttons_links_header {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap:wrap;
 }
-.container_buttons_links_header a:hover {
-  color: #2a4359;
-}
-.container_buttons_links_header btn {
-  width: 100px;
-  height: 100px;
-  background: #2a4359;
-  color: #fff;
-  display: flex;
-  justify-content:center;
-  align-items:center;
-}
+
 /* Section methodology */
 .section_body_methodology {
   background-color:#ffe3ae;
@@ -73,43 +57,45 @@ ol {
 .methodology {
   display: flex;  
   align-items: start;
-  background: #ffe3ae;
+  background: #ffffff;
+  gap: 20px;
 }
+
+.section_footer_methodology {
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+}
+
 /* Table with one column */
 .section_footer_methodology .box_table1 {
   flex: 1;
   background: hsl(68, 51%, 85%);
   color: rgb(3, 3, 3);
-  border-radius: 0px;
+  border-radius: 6px;
+  border: 2px solid #000000;
   margin: 10px 10px 10px 10px;
   padding: 15px 15px;
   text-align:center;
   align-items: center;
   justify-content: center;
+  
 }
-.methodology .box_table1:nth-of-type(1) {
-  flex-grow:1;
-  background: hsl(68, 51%, 85%);
-}
-.methodology .box_table1:nth-of-type(2) {
-  flex-grow:4;
-}
-/* Methodology box 3 */
-.methodology .box_table1:nth-of-type(3) {
-  flex-grow:1;
-  background: #ffffff;
-}
+
 /* Formel bokser */
 .methodology .box_table2 {
   flex: 1;
   background: hsl(68, 51%, 85%);
   color: rgb(0, 0, 0);
-  border-radius: 0px;
+  border-radius: 6px;
   margin: 20px 20px 20px 20px;
   padding: 15px 15px;
   text-align:center;
   align-items: center;
   justify-content: center;
+  margin-bottom: 50px;
+  border: 2px solid #000000;
+
 }
 
 
