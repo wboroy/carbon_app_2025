@@ -9,15 +9,15 @@ import json
 carbon_app=Blueprint('carbon_app',__name__)
 
 
-efco2={'Bus':{'Diesel':0.10,'CNG':0.08, 'Petrol':0.15,'No Fossil Fuel':0},
-
-       'Car':{'Diesel':2, 'Petrol': 3},
-       'Motorbike':{'Diesel':2, 'Petrol':2}
-}
-
-efch4={'Bus':{'Diesel':0.20,'CNG':0.08, 'Petrol':0.30,'No Fossil Fuel':0},
-       'Car':{'Diesel':0.20,'Petrol':0.3},
-       'Motorbike':{'Diesel':2,'Petrol':2}
+efco2={'Bus':{'Diesel':0.03, 'Electric':0.013},
+       'Car':{'Diesel':0.229, 'Petrol': 0.198, 'Electric':0.059},
+       'Motorbike':{'Fossil fuel':0.095},
+       'Train':{'Diesel':0.091,'Electric':0.007},
+       'Plane Economy':{'Jetfuel':0.127},
+       'Plane Business':{'Jetfuel':0.284},
+       'Ferry':{'Fossil fuel':0.186, 'Electric':0.023},
+       'Bybane':{'Electric':0.0015},
+       'Walking/Cycling':{'Human powered':0}
 }
 
 
@@ -31,13 +31,11 @@ def carbon_app_home():
         fuel=form.fuel_type.data
         transport= form.transport.data
         co2=float(kms)*efco2[transport][fuel]
-        ch4=float(kms)*efch4[transport][fuel]
-        total=co2+ch4
+        total=co2
         co2=float("{:.2f}".format(co2))
-        ch4=float("{:.2f}".format(ch4))
         total=float("{:.2f}".format(total))
         emissions=Transport(kms=kms, transport=transport, fuel=fuel,
-                            co2=co2, ch4=ch4, total=total, author=current_user)
+                            co2=co2, total=total, author=current_user)
         db.session.add(emissions)
         db.session.commit()
         return redirect(url_for('carbon_app.your_data'))
