@@ -7,9 +7,10 @@ class TransportForm(FlaskForm):
         'Transport Type',
         [InputRequired()],
         choices=[
-            ('Bus', 'Bus'), ('Car', 'Car'),('Motorbike','Motorbike')])
+            ('Bus', 'Bus'), ('Car', 'Car'),('Motorbike','Motorbike'),('Train','Train'),('Ferry','Ferry'),
+            ('Plane Economy','Plane Economy'), ('Plane Business','Plane Business'),('Bybane','Bybane'),('Walking/Cycling','Walking/Cycling')])
     kms=FloatField('Kilometers', [InputRequired()])
     fuel_type= SelectField('Type of fuel', [InputRequired()],
-        choices=[('Diesel', 'Diesel'),('Petrol', 'Petrol')])
+        choices=[('Diesel', 'Diesel'),('Petrol','Petrol'),('Electric','Electric'),('Human powered','Human powered'),('Jetfuel','Jetfuel'),('Fossil fuel','Fossil fuel')])
     submit=SubmitField('Submit')    
 
