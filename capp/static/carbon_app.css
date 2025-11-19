@@ -1,75 +1,142 @@
-/* Colors 
-Carbon App, section 1 (header, background): #2a4359
-Carbon App, section 1 (header, boxes): #6da6a6
-Carbon App, section 2 (header, background): #466fa6
-Carbon App, section 2 (header, boxes): #8badd9
-*/
-
-/* Utilities  */
-p {
-  margin: 10px 0;
-  font-size: 18px;
-  text-align: left;
-}
-h4 {
-  font-size: 18px;
-  text-align: left;
-  font-weight: bold;
-}
-/* Section header */
 .section_header_carbon_app {
-  background-color:#466fa6;
-}
-.header_carbon_app {
-  display: flex;  
-  align-items: start;
-  background: #466fa6;
-}
-.carbon-calculator-title .text-logo {
-  color: #ffffff;
-  justify-content: center;
-  display: flex;
-  font-weight: 500;
-  text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;
-}
-.header_carbon_app .box {
-  flex: 1;
-  background: #466fa6;
-  color: #fff;
-  border-radius: 10px;
-  margin: 20px 10px;
-  padding: 15px 20px;
-  text-align:center;
-  align-items: center;
-  justify-content: center;
-}
-.header_carbon_app .box:nth-of-type(1) {
-  flex-grow:2;
-}
-.header_carbon_app .box:nth-of-type(2) {
-  flex-grow:1;
-}
-.container_buttons_links_header_carbon_app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap:wrap;
-}
-.container_buttons_links_header_carbon_app a:hover {
-  color: #466fa6;
-}
-.container_buttons_links_header_carbon_app btn {
-  width: 100px;
-  height: 100px;
-  background: #466fa6;
-  color: #fff;
-  display: flex;
-  justify-content:center;
-  align-items:center;
+  background-color: white;
+  color: black;
+  padding:100px 20px;
+  text-align: center;
 }
 
-@media (max-width:768px) { 
-  .header_carbon_app {
-    flex-direction: column;
-  } 
+
+.container_buttons_links_header_carbon_app {
+  margin-top: 40px;
+  justify-content: center;
+  text-align: center;
 }
+
+.calculator_app_section {
+  background-color: white;
+  color: black;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  border-top: 2px solid #e5e7eb
+}
+
+
+.calculator_app_section h3 {
+  color: #14532d;
+  font-weight: 600;
+  margin-bottom: 15px;
+
+}
+
+.calculator_app_section p {
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  font-size: 18px;
+  line-height: 1.6;
+  
+}
+
+
+.calculator_app_section form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  background: #f9fafb;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.calculator_app_section .form-group {
+  margin-bottom: 20px;
+}
+
+
+.calculator_app_section label {
+  font-weight: 500;
+  color: #333;
+}
+
+.calculator_app_section input,
+.calculator_app_section select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.btn_carbon_app_new_entry_main {
+  display: block;
+  width: 100%;
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn_carbon_app_new_entry_main:hover {
+  background-color: #16a34a;
+}
+
+
+.modal-header {
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #1e5631, #14532d);
+  color: white;
+}
+
+.modal-title  {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.modal-body {
+  background-color: #f9fafb;
+  color: #1f2937;
+  padding: 25px 30px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.modal-body ol {
+  margin-top: 40px;
+}
+
+.modal-body li {
+  margin-bottom: 10px;
+}
+
+.modal-body .note {
+  margin-top:15px;
+  color: #047857;
+  font-style: italic;
+}
+
+.modal-footer {
+  background-color: #f9fafb;
+  justify-content: center;
+  padding-bottom: 25px;
+  border: none;
+}
+
+.modal-footer .btn-secondary {
+  background-color: #22c55e;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 8px;
+}
+
+.top-wave {
+  background-color: white;
+  height: 80px;
+}
+

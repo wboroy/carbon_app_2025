@@ -28,6 +28,10 @@
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='carbon_app.css') }}">
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='user.css') }}">
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='about_us.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='your_data.css') }}">
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
 
       {% block styles %}{% endblock %} 
         
@@ -57,9 +61,6 @@
                 <ul>
                     {% if current_user.is_authenticated %}
                     <li>
-                        <a href="{{url_for('home.home_home')}}">Home</a>
-                    </li>
-                    <li>
                         <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
                     </li>
                       <li>
@@ -72,9 +73,6 @@
                         <a href="{{url_for('users.logout')}}">Logout</a>
                     </li>
                     {% else %}
-                    <li>
-                        <a href="{{url_for('home.home_home')}}">Home</a>
-                    </li>
                     <li>
                         <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
                     </li>
@@ -98,6 +96,19 @@
             </div>
           </div>
         </section>
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages-container">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }} fade show" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
 
         {% block content %} {% endblock %}
 
@@ -128,18 +139,19 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         
-        <!-- Auto-dismiss flash messages after 5 seconds -->
+        <!-- Auto-dismiss flash messages after 3 seconds -->
         <script>
             setTimeout(function() {
-                var flashMessage = document.getElementById('flash-message');
-                if (flashMessage) {
-                    var bsAlert = new bootstrap.Alert(flashMessage);
+                var alerts = document.querySelectorAll('.alert');
+                alerts.forEach(function(alert) {
+                    var bsAlert = new bootstrap.Alert(alert);
                     bsAlert.close();
-                }
+                });
             }, 3000); // 3000 milliseconds = 3 seconds
         </script>
         
     </body>
 
 </html>
+
 
