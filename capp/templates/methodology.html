@@ -2,12 +2,12 @@
 {% block content %}
   
 <!-- Header -->
-<section class="section_header_methodology">
+<section class="section_header_methodology" style="background: url('{{ url_for('static', filename='icons/Skog bilde.jpg') }}') center center / cover no-repeat;">
     <div class="container">
   
       <div class="header">
         <div class="box"> 
-          <h1 style="font-size:55px;"><span class="text-logo"> Methodology</span></h1>
+          <h1 style="font-size:55px;"><span class="highlight"> Methodology</span></h1>
           <p style="text-align:center;">
               Our carbon calculator is built to make climate awareness easy to understand.
 Behind every result is a simple idea — helping you see how your everyday travel choices affect the planet. By using verified data and smart calculations, the app turns your input into an estimate of your personal carbon footprint. 
@@ -16,15 +16,17 @@ Behind every result is a simple idea — helping you see how your everyday trave
 The goal is to make it easier for you to take small steps toward a greener lifestyle. Want to see the full details? Click the paper below to explore our complete methodology and data sources.
           </p>
           
+          
 <div class="container_buttons_links_header">
             <div class="btn">
-                <a href="#" class="btn btn-primary btn-lg mr-2", style="background-color:#4f964f;">Paper</a>
+                <a href="{{ url_for('static', filename='Essay mal grønn.pdf') }}" class="btn btn-primary btn-lg mr-2", style="background-color:#2383d1;">Paper</a>
             </div>
             <div class="btn">
-                <a href="{{url_for('carbon_app.carbon_app_home')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">Carbon App</a>
+                <a href="{{url_for('carbon_app.carbon_app_home')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#2383d1">Carbon App</a>
             </div>
           </div>  
         </div>
+       
         
     </div>
 </section> 
