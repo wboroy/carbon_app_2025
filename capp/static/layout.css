@@ -10,36 +10,11 @@ Navbar (a menu): #0f4c3a
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&display=swap');
 
 
-/* CSS utilities */
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-
 /* Carbon App logo */
 .text-logo {
   color: #0f4c3a!important;
 }
 
-/* Logo Color Styling */
-.logo-foot {
-  color: #006400; /* Dark green for "Foot" */
-  font-weight: 400;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.logo-print {
-  color: #ffffff; /* Lighter green for "Print" */
-  font-weight: 400;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.fa-solid.fa-leaf {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  color: #006400;
-}
 
 /* Font imports */
 
@@ -127,11 +102,10 @@ img {
 .carbon_app_navbar {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   height: 70px;
   align-items: center;
   background-color: transparent;
-  padding: 0 0px;
+ 
 }
 .carbon_app_navbar a {
   color: #0f4c3a;
@@ -139,36 +113,26 @@ img {
   margin: 0 5px;
   font-size: 20px;
   text-decoration: none;
-  border-radius: 5px;
   font-weight: 500;
   font-size: 1.2rem;
 }
 .carbon_app_navbar a:hover{
-  border-bottom: #16a34a 0px solid;
   color: #15803d;
 }
 .carbon_app_navbar ul {
   display:flex ;
   flex-direction: row;
-  align-self: flex-end;
   margin-bottom: 5px;
 }
-.carbon_app_navbar .logo {
-  font-weight: 400;
-  padding: 10px 15px;
-  border-radius: 5px;
-}
+
 .carbon_app_navbar .logo .logo-link {
-  color: inherit;
   text-decoration: none;
   padding: 0;
   margin: 0;
-  border-radius: 0;
   font-size: inherit;
 }
 .carbon_app_navbar .logo .logo-link:hover {
   border-bottom: none;
-  color: inherit;
 }
 
 /* Footer  */
@@ -187,17 +151,11 @@ img {
 
 .section_carbon_app_navbar.is-overlay {
   background: transparent !important;
-  backdrop-filter: none !important;
-  box-shadow: none !important;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
   z-index: 1000;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none !important;
 }
 
 
