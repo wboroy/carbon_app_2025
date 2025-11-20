@@ -86,7 +86,7 @@
 
         <div class="form-group">
           {{form.transport.label(class="form-control-label")}}
-          {{form.transport(class="form-control form-control-lg")}}
+          {{form.transport(class="form-control form-control-lg", id="transport_select")}}
         </div>
         <div class ="form-group">
           {{form.kms.label(class="form-control-label")}}
@@ -94,7 +94,13 @@
         </div>
         <div class ="form-group">
           {{form.fuel_type.label(class="form-control-label")}}
-          {{form.fuel_type(class="form-control form-control-lg")}}
+          {{form.fuel_type(class="form-control form-control-lg", id="fuel_select")}}
+
+         <div class="form-group">
+
+         <div id="passenger-box" style="display:none;">
+          {{form.passenger.label(class="form-control-label")}}
+          {{form.passenger(class="form-control form-control-lg")}}
         </div>
       </fieldset>
       <br>
@@ -109,6 +115,64 @@
 
   </div>
 </section> 
+
+<!-- Java Script -->
+
+<script>
+    const fuelOptions = {
+        "Bus": ["Diesel", "Electric"],
+        "Car": ["Diesel", "Petrol", "Electric"],
+        "Motorbike": ["Fossil fuel"],
+        "Train": ["Diesel", "Electric"],
+        "Plane Economy": ["Jetfuel"],
+        "Plane Business": ["Jetfuel"],
+        "Ferry": ["Fossil fuel", "Electric"],
+        "Bybane": ["Electric"],
+        "Walking/Cycling": ["Human powered"]
+    };
+
+    const transportSelect = document.getElementById("transport_select");
+    const fuelSelect = document.getElementById("fuel_select");
+
+    function updateFuelChoices() {
+        const selectedTransport = transportSelect.value;
+        const allowedFuels = fuelOptions[selectedTransport] ? fuelOptions[selectedTransport] : [];
+
+        fuelSelect.innerHTML = ""; // clear fuel options
+
+        allowedFuels.forEach(fuel => {
+            const opt = document.createElement("option");
+            opt.value = fuel;
+            opt.textContent = fuel;
+            fuelSelect.appendChild(opt);
+        });
+    }
+
+    // Update fuel list on load + whenever transport changes
+    transportSelect.addEventListener("change", updateFuelChoices);
+    updateFuelChoices();
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const transportField = document.getElementById("transport_select");
+    const passengerBox = document.getElementById("passenger-box");
+
+    function updatePassengers() {
+      const transport = transportField.value;
+
+      if (["Car", "Motorbike"].includes(transport)) {
+        passengerBox.style.display = "block";
+      } else {
+        passengerBox.style.display = "none";
+      }
+    }
+
+    transportField.addEventListener("change", updatePassengers);
+    updatePassengers();
+  });
+</script>
+
 
 
 {% endblock content %}
