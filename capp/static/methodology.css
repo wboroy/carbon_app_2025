@@ -5,21 +5,20 @@ Methodology, section 2 (methodology, background): #466fa6
 Methodology, section 2 (methodology, boxes): #8badd9
 */
 /* Utilities  */
+
 p {
   margin: 10px 0;
   font-size: 18px;
 }
+
 h4 {
   font-size: 18px;
   text-align: left;
   font-weight: bold;
 }
-ol {
-  font-size: 18px;
-}
+
 /* Section header */
 .section_header_methodology {
-  background-color:hsl(68, 51%, 85%);
   min-height: 70vh;
   display:flex;
   font-weight: bold;
@@ -50,15 +49,23 @@ ol {
 
 /* Section methodology */
 .section_body_methodology {
-  background-color:#ffe3ae;
+  background-color:#5f5541;
+  padding-bottom: 50px;
   
 }
 /* Bakgrunn formel box */
 .methodology {
   display: flex;  
   align-items: start;
-  background: #ffffff;
+  background: #5f5541;
   gap: 20px;
+}
+h9 {
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  display: flex;
 }
 
 .section_footer_methodology {
