@@ -139,7 +139,6 @@ body.home-page {
 .info_cards_container {
   display: flex;
   justify-content: center;
-  gap: 0;
   margin-top: -50px;
   position: relative;
   z-index: 10;
@@ -318,16 +317,6 @@ body.home-page {
   .hero_content p {
     font-size: 1rem;
   }
-  .floating_card {
-    max-width: 90%;
-  }
 
-  .team_boxes {
-    flex-direction: column;
-    gap: 20px;
-  }
 
-  .team_box {
-    width: 100%;
-  }
 }

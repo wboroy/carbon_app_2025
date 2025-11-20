@@ -22,8 +22,7 @@ h4 {
   min-height: 70vh;
   display:flex;
   font-weight: bold;
-}
-
+ }
 .header {
   display: flex;  
   align-items: start;
