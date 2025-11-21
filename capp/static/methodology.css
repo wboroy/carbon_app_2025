@@ -1,8 +1,9 @@
+/* Avstand og tekst */
 p {
   margin: 10px 0;
   font-size: 18px;
 }
-
+/* Overskrift bokser */
 h4 {
   font-size: 18px;
   text-align: left;
@@ -53,8 +54,8 @@ h4 {
   background: #5f5541;
   gap: 20px;
 }
-
-h9 {
+/* Overskrift: Our numbers and formulas */
+h6 {
   color: #ffffff;
   justify-content: center;
   align-items: center;
@@ -68,7 +69,7 @@ h9 {
   gap:15px;
 }
 
-
+/* Human Power */
 .section_footer_methodology .box_table1 {
   flex: 1;
   background: hsl(68, 51%, 85%);
@@ -83,7 +84,7 @@ h9 {
   
 }
 
-/* Formel bokser */
+/* Formel boksene */
 .methodology .box_table2 {
   flex: 1;
   background: hsl(68, 51%, 85%);
