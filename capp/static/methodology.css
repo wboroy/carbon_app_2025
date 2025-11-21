@@ -46,6 +46,7 @@ h4 {
   padding-bottom: 50px;
   
 }
+
 /* Bakgrunn formel box */
 .methodology {
   display: flex;  
@@ -98,9 +99,6 @@ h6 {
   border: 2px solid #000000;
 
 }
-
-
-
 
 @media (max-width:768px) { 
   .header {
