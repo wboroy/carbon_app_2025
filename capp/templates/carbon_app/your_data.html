@@ -50,15 +50,6 @@
 
         </div>
         <div class="box">  
-            {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                    {% for category, message in messages %}
-                        <div class="alert alert-{{ category }}">
-                            {{ message }}
-                        </div> 
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}  
 
             <table class="table">
               <thead class="thead-dark">
@@ -68,7 +59,7 @@
                 <th scope="col">Transport</th>
                 <th scope="col">Fuel</th>
                 <th scope="col">Kilometers</th>
-                <th scope="col">Total Emissions</th>
+                <th scope="col">Total Emissions (Kg CO₂)</th>
                 <th scope="col">Delete</th>
                 </tr>
               </thead>
@@ -116,7 +107,7 @@
                     datasets: [{
                         data: emission_transport_data,
                         backgroundColor: ['#9ac2be', '#f2e3b6', '#f2c299',
-                            '#f2935c', '#5fd9cd', '#f2d95c', '#f2b84b', '#f27979' ],
+                            '#f2935c', '#5fd9cd', '#f2d95c', '#f2b84b', '#f27979', '#8fb8f2' ],
     
                         borderWidth: 1,
                         hoverBorderColor: "black",
@@ -181,7 +172,7 @@
                     backgroundColor: [
                         '#9ac2be', '#f2e3b6', '#f2c299',
                         '#f2935c', '#5fd9cd', '#f2d95c',
-                        '#f2b84b', '#f27979'
+                        '#f2b84b', '#f27979', '#8fb8f2'
                     ],
                     borderWidth: 1,
                     hoverBorderColor: "black",

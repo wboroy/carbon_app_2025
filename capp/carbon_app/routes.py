@@ -8,7 +8,7 @@ import json
 
 carbon_app=Blueprint('carbon_app',__name__)
 
-
+#dictionary
 efco2={'Bus':{'Diesel':0.03, 'Electric':0.013},
        'Car':{'Diesel':0.229, 'Petrol': 0.198, 'Electric':0.059},
        'Motorbike':{'Fossil fuel':0.095},
@@ -88,7 +88,7 @@ def your_data():
         filter(Transport.date > (datetime.now() - timedelta(days=5))).filter_by(author=current_user). \
         group_by(Transport.transport).order_by(Transport.transport.asc()).all()
 
-    # CLEANED kms transport pie chart
+    # kms transport pie chart
     kms_dict = {}
     for value, transport in kms_by_transport:
         kms_dict[transport] = value
@@ -97,7 +97,7 @@ def your_data():
     kms_lable = list(kms_dict.keys())
 
 
-        # Kilometers by date (individual)
+        # Kilometers by date
     kms_by_date = db.session.query(db.func.sum(Transport.kms), Transport.date). \
         filter(Transport.date > (datetime.now() - timedelta(days=5))).filter_by(author=current_user). \
         group_by(Transport.date).order_by(Transport.date.asc()).all()
@@ -107,7 +107,7 @@ def your_data():
         kms_over_time.append(kms)
 
 
-
+#sender til html via json
     return render_template('carbon_app/your_data.html', title='your_data', 
         entries=entries,
         emissions_by_transport=json.dumps(emission_value),

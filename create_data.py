@@ -27,5 +27,3 @@ transport1.user_id
 transport1.author
 transport1.author.username
 
-#Erase tables and rows
-#db.drop_all()
